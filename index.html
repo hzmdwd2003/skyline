@@ -800,6 +800,147 @@
       .black-transition-gap { height: 42px; }
     }
 
+
+    /* v3 fine-tuning */
+    .price-main{padding:28px;}
+    .price-main h3{font-size:1.6rem;}
+    .price-main .km{font-size:clamp(3rem,5.8vw,4.5rem);}
+    .compact-booking{background:linear-gradient(180deg,#dcd7ce 0%, #ebe7df 16%, #f2eee5 100%);}
+    .compact-booking .eyebrow{color:#d0b36b;}
+    .compact-booking .section-head h2{font-size:clamp(1.65rem,3vw,2.65rem);}
+    .compact-booking .booking-grid{grid-template-columns:.95fr 1.05fr;gap:26px;align-items:start;}
+    .compact-booking .form-card{padding:20px;max-width:540px;justify-self:end;}
+    .compact-booking .form-grid{gap:12px;}
+    .compact-booking input,.compact-booking select,.compact-booking textarea{padding:11px 12px;}
+    .compact-booking textarea{min-height:88px;}
+    .small-price-hint{margin-top:14px;font-size:.88rem;color:#6f6a61;font-weight:700;}
+    .booking-cta-line{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px;}
+    .booking-cta-line span{color:#6f6a61;font-weight:700;}
+    .small-green-btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border-radius:999px;background:#20c263;color:#06160b;font-weight:850;box-shadow:0 12px 26px rgba(32,194,99,.18);}
+    .black-transition-gap{height:58px;}
+    .fleet-link-card{display:block;position:relative}
+    .fleet-link-card .fleet-label{z-index:2}
+    .fleet-link-card:hover .fleet-label{background:rgba(200,167,95,.25);color:#fff}
+    .fleet-section-note{margin-top:18px}
+    @media (max-width:980px){
+      .compact-booking .booking-grid{grid-template-columns:1fr;}
+      .compact-booking .form-card{max-width:none;justify-self:auto;}
+    }
+    @media (max-width:680px){
+      .price-main .km{font-size:clamp(2.45rem,11vw,3.5rem);}
+      .compact-booking .section-head h2{font-size:clamp(1.45rem,8vw,2.2rem);}
+      .black-transition-gap{height:34px;}
+    }
+
+
+    /* v4: compact direct enquiry + smaller price highlight */
+    .booking.compact-booking {
+      padding: 46px 0 !important;
+    }
+    .compact-booking .booking-grid {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 22px !important;
+      align-items: start !important;
+    }
+    .compact-booking .section-head {
+      margin-bottom: 14px !important;
+    }
+    .compact-booking .section-head h2 {
+      font-size: clamp(1.45rem, 2.4vw, 2.2rem) !important;
+      margin: 12px 0 10px !important;
+    }
+    .compact-booking .section-head p {
+      font-size: .94rem !important;
+      max-width: 520px;
+    }
+    .compact-booking .contact-list {
+      gap: 8px !important;
+      margin-top: 14px !important;
+    }
+    .compact-booking .contact-line {
+      gap: 10px !important;
+    }
+    .compact-booking .contact-icon {
+      width: 36px !important;
+      height: 36px !important;
+      flex-basis: 36px !important;
+      font-size: .85rem;
+    }
+    .compact-booking .contact-line small {
+      font-size: .72rem;
+    }
+    .compact-booking .contact-line strong {
+      font-size: .9rem;
+    }
+    .compact-booking .form-card {
+      padding: 17px !important;
+      max-width: 500px !important;
+      border-radius: 20px !important;
+    }
+    .compact-booking .form-card h3 {
+      font-size: 1.42rem !important;
+      margin-bottom: 5px !important;
+    }
+    .compact-booking .form-card > p {
+      font-size: .84rem !important;
+      margin-bottom: 12px !important;
+    }
+    .compact-booking .form-grid {
+      gap: 9px !important;
+    }
+    .compact-booking label {
+      font-size: .74rem !important;
+      margin-bottom: 4px !important;
+    }
+    .compact-booking input,
+    .compact-booking select,
+    .compact-booking textarea {
+      padding: 9px 10px !important;
+      font-size: .9rem !important;
+      border-radius: 10px !important;
+    }
+    .compact-booking textarea {
+      min-height: 68px !important;
+    }
+    .compact-booking .form-card .btn {
+      min-height: 42px !important;
+      margin-top: 11px !important;
+      font-size: .9rem !important;
+    }
+    .small-price-hint {
+      margin-top: 10px !important;
+      font-size: .82rem !important;
+    }
+
+    .price-main .km {
+      font-size: clamp(2.25rem, 4.1vw, 3.4rem) !important;
+      margin: 16px 0 10px !important;
+    }
+    .price-main h3 {
+      font-size: 1.4rem !important;
+    }
+
+    @media (max-width: 980px) {
+      .compact-booking .booking-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .compact-booking .form-card {
+        max-width: none !important;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .booking.compact-booking {
+        padding: 38px 0 !important;
+      }
+      .compact-booking .section-head h2 {
+        font-size: 1.55rem !important;
+      }
+      .price-main .km {
+        font-size: 2.55rem !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -807,7 +948,7 @@
   <nav class="nav" aria-label="Hauptnavigation">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="Skyline Drive Startseite">
-        <span class="brand-monogram" aria-hidden="true"><img src="assets/assets/Screenshot 2026-08-11 011525.png" alt=""></span>
+        <span class="brand-monogram" aria-hidden="true"><img src="assets/skyline-drive-logo.png" alt=""></span>
         <span class="brand-copy">
           <strong>Flughafentransfer | Skyline Drive GmbH</strong>
           <span>Flughafentransfer Frankfurt & Fahrservice</span>
@@ -998,9 +1139,7 @@
           Preise können je nach genauer Abholadresse, Uhrzeit, Wartezeit, Zwischenstopps,
           Fahrzeuggröße und Gepäck abweichen. Maßgeblich ist immer der vor Fahrtbeginn bestätigte Festpreis.
         </p>
-        <div style="margin-top:24px">
-          <a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20mein%20Abholort%20ist%20nicht%20in%20der%20Preisliste.%20Ich%20m%C3%B6chte%20einen%20Festpreis%20anfragen." target="_blank" rel="noopener">Dein Abholort ist nicht dabei? Jetzt anfragen</a>
-        </div>
+        <div class="booking-cta-line"><span>Dein Abholort ist nicht dabei?</span><a class="small-green-btn" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20mein%20Abholort%20ist%20nicht%20in%20der%20Preisliste.%20Ich%20m%C3%B6chte%20einen%20Festpreis%20anfragen." target="_blank" rel="noopener">Jetzt anfragen</a></div>
       </div>
     </section>
 
@@ -1024,15 +1163,38 @@
       </div>
     </section>
 
+    
     <section class="fleet" id="flotte">
       <div class="container">
-        <div class="section-head"><div class="eyebrow">Fahrzeuge</div><h2>Das passende Fahrzeug für Ihre Fahrt.</h2><p>Klicken Sie auf ein Fahrzeug für Sitzplätze und Gepäck. Alle Fahrzeuge finden Sie auf unserer <a href="flotte.html" style="color:var(--gold2);text-decoration:underline">Flottenseite</a>.</p></div>
+        <div class="section-head">
+          <div class="eyebrow">Fahrzeuge</div>
+          <h2>Unsere Fahrzeuge für Flughafentransfers.</h2>
+          <p>Wählen Sie ein Fahrzeug – für alle Details gelangen Sie direkt zur Flottenseite.</p>
+        </div>
         <div class="fleet-grid">
-          <figure class="fleet-photo large" tabindex="0" role="button"><img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%281%29.png" alt="Flughafentransfer Skyline Drive" loading="lazy"><figcaption class="fleet-label">Flughafentransfer</figcaption><div class="fleet-info"><div><h3>Flughafentransfer</h3><p>Wir wählen passend zu Personen und Gepäck das geeignete Fahrzeug.</p><p class="fleet-hint">Erneut klicken zum Schließen</p></div></div></figure>
-          <figure class="fleet-photo" tabindex="0" role="button"><img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%283%29.png" alt="Mercedes E-Klasse" loading="lazy"><figcaption class="fleet-label">Mercedes E-Klasse</figcaption><div class="fleet-info"><div><h3>Mercedes E-Klasse</h3><p>4 Personen</p><p>2–4 Koffer</p><p class="fleet-hint">Erneut klicken zum Schließen</p></div></div></figure>
-          <figure class="fleet-photo" tabindex="0" role="button"><img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%284%29.png" alt="Mercedes Vito" loading="lazy"><figcaption class="fleet-label">Mercedes Vito</figcaption><div class="fleet-info"><div><h3>Mercedes Vito</h3><p>8 Personen</p><p>4–6 Koffer</p><p class="fleet-hint">Erneut klicken zum Schließen</p></div></div></figure>
-          <figure class="fleet-photo" tabindex="0" role="button"><img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%285%29.png" alt="VW Passat" loading="lazy"><figcaption class="fleet-label">VW Passat</figcaption><div class="fleet-info"><div><h3>VW Passat</h3><p>4 Personen</p><p>2–4 Koffer</p><p class="fleet-hint">Erneut klicken zum Schließen</p></div></div></figure>
-          <figure class="fleet-photo" tabindex="0" role="button"><img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_13%20%286%29.png" alt="VW Touran" loading="lazy"><figcaption class="fleet-label">VW Touran</figcaption><div class="fleet-info"><div><h3>VW Touran</h3><p>6 Personen</p><p>2–4 Koffer</p><p class="fleet-hint">Erneut klicken zum Schließen</p></div></div></figure>
+          <a class="fleet-photo fleet-link-card large" href="flotte.html#allgemein">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%281%29.png" alt="Flughafentransfer Skyline Drive" loading="lazy">
+            <span class="fleet-label">Flughafentransfer</span>
+          </a>
+          <a class="fleet-photo fleet-link-card" href="flotte.html#e-klasse">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%283%29.png" alt="Mercedes E-Klasse" loading="lazy">
+            <span class="fleet-label">Mercedes E-Klasse</span>
+          </a>
+          <a class="fleet-photo fleet-link-card" href="flotte.html#vito">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%284%29.png" alt="Mercedes Vito" loading="lazy">
+            <span class="fleet-label">Mercedes Vito</span>
+          </a>
+          <a class="fleet-photo fleet-link-card" href="flotte.html#passat">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%285%29.png" alt="VW Passat" loading="lazy">
+            <span class="fleet-label">VW Passat</span>
+          </a>
+          <a class="fleet-photo fleet-link-card" href="flotte.html#touran">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_13%20%286%29.png" alt="VW Touran" loading="lazy">
+            <span class="fleet-label">VW Touran</span>
+          </a>
+        </div>
+        <div class="fleet-section-note">
+          <a class="btn btn-whatsapp" href="flotte.html">Zur Flotte</a>
         </div>
       </div>
     </section>
@@ -1095,15 +1257,6 @@
         const message = this.dataset.message || 'Hallo Skyline Drive, ich möchte einen Flughafentransfer anfragen.';
         window.open('https://wa.me/491786287358?text=' + encodeURIComponent(message), '_blank', 'noopener');
       });
-    });
-
-    document.querySelectorAll('.fleet-photo').forEach(card => {
-      const toggleInfo = () => {
-        document.querySelectorAll('.fleet-photo.open').forEach(openCard => { if (openCard !== card) openCard.classList.remove('open'); });
-        card.classList.toggle('open');
-      };
-      card.addEventListener('click', toggleInfo);
-      card.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleInfo(); } });
     });
 
     const cookieBanner = document.getElementById('cookieBanner');
