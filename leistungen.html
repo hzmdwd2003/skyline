@@ -125,6 +125,38 @@ footer{padding:42px 0 90px;color:#a6a6a6;border-top:1px solid rgba(255,255,255,.
   .route{align-items:flex-start;flex-direction:column}
   .fleet-card img{height:210px}
 }
+
+/* Logo visibility fix */
+.brand-monogram{
+  width:124px!important;
+  height:68px!important;
+  flex:0 0 124px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  overflow:hidden!important;
+  box-shadow:none!important;
+}
+.brand-monogram img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:scale(1.58)!important;
+  transform-origin:center!important;
+  mix-blend-mode:screen;
+  filter:contrast(1.08) brightness(1.06);
+}
+@media(max-width:680px){
+  .brand-monogram{
+    width:86px!important;
+    height:54px!important;
+    flex-basis:86px!important;
+  }
+  .brand-monogram img{transform:scale(1.48)!important}
+}
+
 </style>
 
 </head>
