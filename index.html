@@ -412,7 +412,6 @@
       object-fit: cover;
       transition: .45s ease;
     }
-    .fleet-photo:hover img { transform: scale(1.035); }
     .fleet-label {
       position: absolute;
       left: 18px;
@@ -423,6 +422,39 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,.14);
       font-size: .82rem;
+    }
+    .fleet-photo {
+      cursor: pointer;
+    }
+    .fleet-info {
+      display: none;
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      padding: 28px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(5,5,5,.92);
+      backdrop-filter: blur(7px);
+    }
+    .fleet-photo.open .fleet-info {
+      display: flex;
+    }
+    .fleet-info h3 {
+      margin-bottom: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    .fleet-info p {
+      margin: 6px 0;
+      color: #dedede;
+    }
+    .fleet-info .fleet-hint {
+      margin-top: 16px;
+      color: var(--gold2);
+      font-size: .84rem;
     }
 
     .prices {
@@ -710,7 +742,7 @@
       <a class="brand" href="#top" aria-label="Skyline Drive Startseite">
         <span class="brand-monogram" aria-hidden="true"><img src="assets/skyline-drive-logo.png" alt=""></span>
         <span class="brand-copy">
-          <strong>Flughafentransfer | Skyline Drive </strong>
+          <strong>Flughafentransfer | Skyline Drive GmbH</strong>
           <span>Flughafentransfer Frankfurt & Fahrservice</span>
         </span>
       </a>
@@ -753,21 +785,21 @@
     <div class="trust-strip">
       <div class="container">
         <div class="trust-grid">
-          <a class="trust-item" href="#kontakt" aria-label="Transfer ab 30 Euro anfragen">
+          <a class="trust-item whatsapp-route" href="#" data-message="Hallo, ich möchte einen Flughafentransfer zum oder vom Flughafen Frankfurt buchen." aria-label="Flughafentransfer Frankfurt per WhatsApp anfragen">
             <strong>Frankfurt Flughafen</strong>
             <span>Preiswerte Fahrten zum und vom Flughafen Frankfurt.</span>
           </a>
-          <a class="trust-item" href="#kontakt" aria-label="Direkten Transfer zum Terminal anfragen">
+          <a class="trust-item whatsapp-route" href="#" data-message="Hallo, ich möchte einen Flughafentransfer nach Frankfurt Hahn buchen." aria-label="Flughafentransfer Frankfurt Hahn per WhatsApp anfragen">
             <strong>Frankfurt Hahn</strong>
             <span>Preiswerte Fahrt zum Flughafen Frankfurt Hahn</span>
           </a>
-          <a class="trust-item" href="#kontakt" aria-label="Transfer aus dem Rhein-Main-Gebiet oder für Fernstrecken anfragen">
+          <a class="trust-item whatsapp-route" href="#" data-message="Hallo, ich möchte einen 7-Sitzer Flughafentransfer für meine Familie anfragen." aria-label="7-Sitzer Transfer per WhatsApp anfragen">
             <strong>7-Sitzer Transfer für Familien</strong>
             <span>Entspannte Fahrt mit der ganzen Familie, auch mit Kindern</span>
           </a>
-          <a class="trust-item" href="#kontakt" aria-label="Kontaktanfrage öffnen">
+          <a class="trust-item whatsapp-route" href="#" data-message="Hallo, ich möchte einen 9-Sitzer Flughafentransfer für eine Gruppe anfragen." aria-label="9-Sitzer Transfer per WhatsApp anfragen">
             <strong>9-Sitzer Transfer für Gruppen</strong>
-            <span>Gruppen Transfer mit viel Gepäck</span>
+            <span>Gruppentransfer mit viel Platz für Personen und Gepäck</span>
           </a>
         </div>
       </div>
@@ -901,30 +933,30 @@
           <div class="eyebrow">Leistungen</div>
           <h2>Flughafentransfer für Einzelpersonen, Familien und Gruppen.</h2>
           <p>
-            Wir bringen Sie von Ihrer Haustür, Ihrem Hotel oder Ihrem Unternehmen direkt zum Flughafen Frankfurt
-            und holen Sie nach der Landung wieder ab. Business-Transfers und individuelle Fahrten bleiben auf Anfrage möglich.
+            Von Ihrer Haustür, Ihrem Hotel oder Unternehmen direkt zum Flughafen und nach der Landung wieder bequem zu Ihrem Wunschziel.
+            Für Familien und Gruppen stehen auf Anfrage passende Fahrzeuge und Kindersitze zur Verfügung.
           </p>
         </div>
         <div class="service-grid">
           <article class="service-card">
             <b>01</b>
-            <h3>Zum Flughafen</h3>
-            <p>Direkte Abholung an Ihrer Adresse und pünktliche Fahrt zum Flughafen Frankfurt – ohne Umsteigen und Parkplatzsuche.</p>
+            <h3>Flughafentransfer</h3>
+            <p>Wir holen Sie an Ihrer Adresse, Ihrem Hotel oder Unternehmen ab und fahren Sie direkt zum Flughafen. Nach Ihrer Landung holen wir Sie ebenso am Flughafen ab und bringen Sie bequem zu Ihrem Wunschziel.</p>
           </article>
           <article class="service-card">
             <b>02</b>
-            <h3>Vom Flughafen</h3>
-            <p>Abholung am Frankfurt Airport und direkte Weiterfahrt nach Frankfurt, Rhein-Main oder zu überregionalen Zielen.</p>
+            <h3>Flughafenfahrt mit Kindersitz</h3>
+            <p>Angenehm mit der ganzen Familie reisen: Auf Wunsch stellen wir passende Kindersitze bereit, damit auch Ihre Kinder sicher und komfortabel mitfahren können. Bitte geben Sie Alter und Anzahl der Kinder bei der Anfrage an.</p>
           </article>
           <article class="service-card">
             <b>03</b>
-            <h3>Gruppen & Gepäck</h3>
-            <p>Für Familien, Gruppen und größere Gepäckmengen stehen je nach Verfügbarkeit Kombis, 7-Sitzer und Vans mit 9-Sitzer bereit.</p>
+            <h3>7-Sitzer Transfer</h3>
+            <p>Ideal für Familien und kleinere Gruppen. Unser 7-Sitzer bietet Platz für bis zu 7 Personen und – abhängig von der Belegung – zusätzliches Gepäck.</p>
           </article>
           <article class="service-card">
             <b>04</b>
-            <h3>Business & Sonderfahrten</h3>
-            <p>Geschäftsfahrten, Hoteltransfers, Messetermine und individuelle Langstrecken können weiterhin persönlich angefragt werden.</p>
+            <h3>9-Sitzer Transfer</h3>
+            <p>Für größere Familien und Gruppen bieten wir 9-Sitzer Transfers an. So können alle gemeinsam fahren und haben je nach Belegung ausreichend Platz für Gepäck.</p>
           </article>
         </div>
       </div>
@@ -933,25 +965,26 @@
     <section class="ads-block">
       <div class="container ads-grid">
         <div class="section-head">
-          <div class="eyebrow">Flughafentransfer ohne Umwege</div>
-          <h2>Direkt zum Flughafen – ohne Umsteigen, Parkplatzsuche oder schweres Gepäck.</h2>
+          <div class="eyebrow">Komfortabler Flughafentransfer</div>
+          <h2>Komfortabler Transfer ohne Probleme – wir passen die Fahrt an Ihre Reise an.</h2>
           <p>
-            Skyline Drive verbindet eine einfache WhatsApp-Buchung mit günstigen Festpreisen und direkter Fahrt.
-            Sie werden an Ihrer Wunschadresse abgeholt und ohne unnötige Zwischenstopps bis zum Terminal oder nach Hause gebracht.
+            Sie möchten mit der Familie reisen? Wir holen Sie auf Wunsch inklusive passender Kindersitze ab.
+            Sie wissen nicht, ob Ihr Flug verspätet ist? Teilen Sie uns Ihre Flugnummer mit – wir berücksichtigen die aktuelle Ankunftszeit bei Ihrer Abholung.
+            Sie haben Zwischenstopps? Kein Problem: Geben Sie diese bei Ihrer Anfrage an und wir planen sie direkt in Ihre Fahrt ein.
           </p>
           <div style="margin-top:28px">
-            <a class="btn btn-primary" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener">Flughafentransfer anfragen</a>
+            <a class="btn btn-primary" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20komfortablen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener">Flughafentransfer anfragen</a>
           </div>
         </div>
         <div class="conversion-card">
           <h3>Ihr Vorteil mit Skyline Drive</h3>
           <ul>
-            <li>Festpreisbestätigung vor Fahrtbeginn</li>
+            <li>Kindersitze auf Wunsch für eine entspannte Familienfahrt</li>
+            <li>Flugnummer angeben und Abholung an die tatsächliche Ankunft anpassen</li>
+            <li>Zwischenstopps können direkt in die Fahrt eingeplant werden</li>
             <li>Abholung an Adresse, Hotel oder Flughafen</li>
-            <li>Direkte Fahrt ohne unnötiges Umsteigen</li>
-            <li>Fahrten am frühen Morgen und spät am Abend auf Anfrage</li>
-            <li>Limousine, Kombi, 7-Sitzer oder Van mit 9-Sitzer je nach Bedarf</li>
-            <li>Business- und Sonderfahrten weiterhin möglich</li>
+            <li>7-Sitzer und 9-Sitzer für Familien und Gruppen</li>
+            <li>Festpreisbestätigung vor Fahrtbeginn</li>
           </ul>
         </div>
       </div>
@@ -963,30 +996,73 @@
           <div class="eyebrow">Fahrzeuge</div>
           <h2>Das passende Fahrzeug für Ihren Flughafentransfer.</h2>
           <p>
-            Ob Einzelperson, Familie oder Gruppe mit viel Gepäck: Je nach Bedarf und Verfügbarkeit
-            setzen wir Limousine, Kombi, 7-Sitzer, 9-Sitzer oder Van für Ihre Flughafenfahrt ein.
+            Klicken Sie auf ein Fahrzeug, um Informationen zu Sitzplätzen und möglicher Gepäckmenge anzuzeigen.
+            Die tatsächliche Gepäckkapazität kann je nach Koffergröße und Belegung abweichen.
           </p>
         </div>
         <div class="fleet-grid">
-          <figure class="fleet-photo large">
-            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%281%29.png" alt="Skyline Drive Flughafentransfer Frankfurt mit Mercedes" loading="lazy">
-            <figcaption class="fleet-label">Mercedes · Flughafentransfer</figcaption>
+          <figure class="fleet-photo large" tabindex="0" role="button" aria-label="Informationen zum Flughafentransfer anzeigen">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%281%29.png" alt="Skyline Drive Flughafentransfer Frankfurt" loading="lazy">
+            <figcaption class="fleet-label">Flughafentransfer</figcaption>
+            <div class="fleet-info">
+              <div>
+                <h3>Flughafentransfer</h3>
+                <p>Je nach Personenanzahl und Gepäck wählen wir das passende Fahrzeug für Ihre Fahrt aus.</p>
+                <p class="fleet-hint">Zum Schließen erneut klicken</p>
+              </div>
+            </div>
           </figure>
-          <figure class="fleet-photo">
+
+          <figure class="fleet-photo" tabindex="0" role="button" aria-label="Informationen zur Mercedes E-Klasse anzeigen">
             <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%283%29.png" alt="Mercedes E-Klasse für Flughafentransfers" loading="lazy">
             <figcaption class="fleet-label">Mercedes E-Klasse · Airport Transfer</figcaption>
+            <div class="fleet-info">
+              <div>
+                <h3>Mercedes E-Klasse</h3>
+                <p>Bis zu 4 Personen</p>
+                <p>Je nach Koffergröße ca. 2–4 Koffer</p>
+                <p class="fleet-hint">Zum Schließen erneut klicken</p>
+              </div>
+            </div>
           </figure>
-          <figure class="fleet-photo">
+
+          <figure class="fleet-photo" tabindex="0" role="button" aria-label="Informationen zum Mercedes Vito anzeigen">
             <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%284%29.png" alt="Mercedes Vito für Gruppen- und Flughafentransfers" loading="lazy">
-            <figcaption class="fleet-label">Mercedes Vito · Gruppen & Gepäck</figcaption>
+            <figcaption class="fleet-label">Mercedes Vito · 9-Sitzer</figcaption>
+            <div class="fleet-info">
+              <div>
+                <h3>Mercedes Vito</h3>
+                <p>Bis zu 9 Sitzplätze</p>
+                <p>Bis zu ca. 4 Koffer möglich, abhängig von Größe und Belegung</p>
+                <p class="fleet-hint">Zum Schließen erneut klicken</p>
+              </div>
+            </div>
           </figure>
-          <figure class="fleet-photo">
+
+          <figure class="fleet-photo" tabindex="0" role="button" aria-label="Informationen zum VW Passat anzeigen">
             <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%285%29.png" alt="VW Passat für Flughafentransfers und Langstrecken" loading="lazy">
             <figcaption class="fleet-label">VW Passat · Airport & Langstrecke</figcaption>
+            <div class="fleet-info">
+              <div>
+                <h3>VW Passat</h3>
+                <p>Bis zu 4 Personen</p>
+                <p>Je nach Koffergröße ca. 2–4 Koffer</p>
+                <p class="fleet-hint">Zum Schließen erneut klicken</p>
+              </div>
+            </div>
           </figure>
-          <figure class="fleet-photo">
+
+          <figure class="fleet-photo" tabindex="0" role="button" aria-label="Informationen zum VW Touran anzeigen">
             <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_13%20%286%29.png" alt="VW Touran als geräumige 7-Sitzer-Option" loading="lazy">
             <figcaption class="fleet-label">VW Touran · 7-Sitzer Option</figcaption>
+            <div class="fleet-info">
+              <div>
+                <h3>VW Touran</h3>
+                <p>Bis zu 7 Sitzplätze</p>
+                <p>Bei voller Belegung ca. 2 Koffer möglich</p>
+                <p class="fleet-hint">Zum Schließen erneut klicken</p>
+              </div>
+            </div>
           </figure>
         </div>
       </div>
@@ -1047,6 +1123,31 @@
         navLinks.classList.remove('open');
         menuButton.setAttribute('aria-expanded', 'false');
         menuButton.textContent = '☰';
+      });
+    });
+
+    document.querySelectorAll('.whatsapp-route').forEach(item => {
+      item.addEventListener('click', function(event) {
+        event.preventDefault();
+        const message = this.dataset.message || 'Hallo Skyline Drive, ich möchte einen Flughafentransfer anfragen.';
+        window.open('https://wa.me/491786287358?text=' + encodeURIComponent(message), '_blank', 'noopener');
+      });
+    });
+
+    document.querySelectorAll('.fleet-photo').forEach(card => {
+      const toggleInfo = () => {
+        document.querySelectorAll('.fleet-photo.open').forEach(openCard => {
+          if (openCard !== card) openCard.classList.remove('open');
+        });
+        card.classList.toggle('open');
+      };
+
+      card.addEventListener('click', toggleInfo);
+      card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleInfo();
+        }
       });
     });
 
