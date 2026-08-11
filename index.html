@@ -942,11 +942,21 @@
     }
 
 
-    /* Logo visibility fix: zoom into the artwork and blend its dark background into the navigation */
-    .brand-monogram {
-      width: 124px !important;
-      height: 68px !important;
-      flex: 0 0 124px !important;
+    /* v5: stronger logo zoom + blue-to-black header gradient */
+    .nav{
+      background:
+        linear-gradient(90deg,
+          rgba(18,49,88,.98) 0%,
+          rgba(13,34,61,.97) 16%,
+          rgba(9,16,27,.95) 34%,
+          rgba(7,7,7,.96) 56%,
+          rgba(7,7,7,.98) 100%) !important;
+      backdrop-filter: blur(17px);
+    }
+    .brand-monogram{
+      width: 132px !important;
+      height: 72px !important;
+      flex: 0 0 132px !important;
       padding: 0 !important;
       border: 0 !important;
       border-radius: 0 !important;
@@ -954,24 +964,23 @@
       overflow: hidden !important;
       box-shadow: none !important;
     }
-    .brand-monogram img {
+    .brand-monogram img{
       width: 100% !important;
       height: 100% !important;
-      object-fit: contain !important;
+      object-fit: cover !important;
       object-position: center !important;
-      transform: scale(1.58) !important;
+      transform: scale(2.12) !important;
       transform-origin: center !important;
-      mix-blend-mode: screen;
-      filter: contrast(1.08) brightness(1.06);
+      filter: contrast(1.08) brightness(1.06) saturate(1.02);
     }
-    @media (max-width: 680px) {
-      .brand-monogram {
-        width: 86px !important;
+    @media (max-width: 680px){
+      .brand-monogram{
+        width: 92px !important;
         height: 54px !important;
-        flex-basis: 86px !important;
+        flex-basis: 92px !important;
       }
-      .brand-monogram img {
-        transform: scale(1.48) !important;
+      .brand-monogram img{
+        transform: scale(1.95) !important;
       }
     }
 
@@ -1214,7 +1223,7 @@
             <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%283%29.png" alt="Mercedes E-Klasse" loading="lazy">
             <span class="fleet-label">Mercedes E-Klasse</span>
           </a>
-          <a class="fleet-photo fleet-link-card" href="flotte.html#vito">
+          <a class="fleet-photo fleet-link-card" href="xl-transfer.html">
             <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%284%29.png" alt="Mercedes Vito" loading="lazy">
             <span class="fleet-label">Mercedes Vito</span>
           </a>
@@ -1307,26 +1316,8 @@
       cookieBanner.classList.remove('show');
     });
 
-
-    // Google Ads contact conversion
-    function trackContactConversion() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18306707563/na3pCNqYx98cEOvgqJlE'
-        });
-      }
-    }
-
-    // Count direct WhatsApp enquiry clicks as contact conversions.
-    document.querySelectorAll('a[href*="wa.me/491786287358"]').forEach(link => {
-      link.addEventListener('click', () => {
-        trackContactConversion();
-      });
-    });
-
     document.getElementById('whatsappForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      trackContactConversion();
       const data = new FormData(this);
       const message = [
         'Hallo Skyline Drive, ich möchte einen Flughafentransfer anfragen.',
