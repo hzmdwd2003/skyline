@@ -4,224 +4,103 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
+    gtag('consent','default',{
+      ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500
     });
-    const savedConsent = localStorage.getItem('skylineConsent');
-    if (savedConsent === 'accepted') {
-      gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'analytics_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
+    if(localStorage.getItem('skylineConsent')==='accepted'){
+      gtag('consent','update',{
+        ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'
       });
     }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18306707563"></script>
-  <script>gtag('js', new Date()); gtag('config', 'AW-18306707563');</script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://skylinedrive.de/xl-transfer.html">
-  <title>XL Transfer Frankfurt | Mercedes Vito | Skyline Drive GmbH</title>
-  <meta name="description" content="XL Flughafentransfer Frankfurt mit Mercedes Vito für bis zu 8 Personen und 4–6 Koffer. Einfach per WhatsApp anfragen.">
-  <style>
-:root{
-  --black:#070707;--black2:#111111;--white:#fff;--soft:#f3f1ec;--muted:#a7a7a7;
-  --gold:#c8a75f;--gold2:#f1d891;--line:rgba(200,167,95,.28);--radius:26px;--max:1180px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--black);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.container{width:min(calc(100% - 34px),var(--max));margin:auto}
-.nav{position:sticky;top:0;z-index:80;background:rgba(7,7,7,.86);backdrop-filter:blur(17px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:14px}
-.brand-monogram{width:118px;height:68px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 118px;padding:5px;border-radius:14px;background:#0b1828;border:1px solid rgba(241,216,145,.28);overflow:hidden}
-.brand-monogram img{width:100%;height:100%;object-fit:contain}
-.brand strong{display:block;letter-spacing:.08em;text-transform:uppercase;font-size:1rem}
-.brand-copy>span{display:block;color:var(--muted);font-size:.76rem;letter-spacing:.08em}
-.nav-links{display:flex;align-items:center;gap:24px;font-size:.93rem}
-.nav-links a:not(.btn):hover{color:var(--gold2)}
-.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:transparent;color:#fff;font-size:1.25rem;cursor:pointer}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;border:1px solid transparent;font-weight:850;cursor:pointer;transition:.2s ease;white-space:nowrap}
-.btn:hover{transform:translateY(-2px)}
-.btn-whatsapp{background:#20c263;color:#06160b;box-shadow:0 14px 36px rgba(32,194,99,.20)}
-.nav-whatsapp{display:inline-flex!important;align-items:center;gap:9px}
-.whatsapp-svg{width:22px;height:22px;flex:0 0 22px;display:block}
-header.page-hero{padding:72px 0 46px;background:radial-gradient(circle at 82% 20%,rgba(200,167,95,.12),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#d6be7f;font-size:.78rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.eyebrow::before{content:"";width:38px;height:1px;background:#cbb06b}
-h1,h2,h3{margin-top:0;line-height:1.1}
-header.page-hero h1{margin:18px 0 12px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;letter-spacing:-.03em}
-header.page-hero p{max-width:760px;color:#d0d0d0;font-size:1rem}
-section{padding:74px 0}
-.section-head{max-width:760px;margin-bottom:34px}
-.section-head h2{margin:16px 0 12px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.7rem,3vw,2.55rem);font-weight:500;letter-spacing:-.03em}
-.section-head p{margin:0;color:var(--muted)}
-.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{display:block;padding:24px;border:1px solid rgba(255,255,255,.09);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));transition:background .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease}
-.card:hover,.card:focus-visible{background:rgba(200,167,95,.12);border-color:rgba(241,216,145,.65);transform:translateY(-3px);box-shadow:0 14px 34px rgba(200,167,95,.10);outline:none}
-.card h3{font-family:Georgia,"Times New Roman",serif;font-size:1.15rem;font-weight:600;margin-bottom:12px}
-.card p{margin:0;color:#d4d4d4;font-size:.98rem}
-.card:hover h3,.card:hover p{color:var(--gold2)}
-.cta-wrap{margin-top:30px;display:flex;justify-content:center}
-.page-cta{min-width:240px}
-.price-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:22px;align-items:start}
-.price-main{padding:28px;border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.10)}
-.price-main h3{font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;font-weight:500;margin-bottom:10px}
-.price-main .km{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.8rem,5vw,4.1rem);color:var(--gold2);line-height:1;margin:18px 0 12px}
-.price-main p{color:#d3d3d3}
-.route-list{display:grid;gap:14px}
-.route{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);text-decoration:none;transition:border-color .22s ease,background .22s ease,transform .22s ease,box-shadow .22s ease}
-.route span{color:#efefef;font-size:.95rem}
-.route strong{color:var(--gold2);font-size:1.05rem;white-space:nowrap}
-.route:hover,.route:focus-visible{border-color:rgba(241,216,145,.72);background:rgba(200,167,95,.12);transform:translateY(-2px);box-shadow:0 10px 26px rgba(200,167,95,.12);outline:none}
-.route:hover span,.route:hover strong{color:var(--gold2)}
-.fleet-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.fleet-card{display:block;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.02));transition:background .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease}
-.fleet-card:hover{background:rgba(200,167,95,.10);border-color:rgba(241,216,145,.55);transform:translateY(-3px);box-shadow:0 14px 34px rgba(200,167,95,.10)}
-.fleet-card img{width:100%;height:250px;object-fit:cover}
-.fleet-content{padding:22px}
-.fleet-content h3{font-family:Georgia,"Times New Roman",serif;font-size:1.28rem;margin-bottom:8px}
-.fleet-content p{margin:0 0 14px;color:#d4d4d4}
-.meta-inline{display:flex;gap:10px;flex-wrap:wrap}
-.pill{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;background:rgba(200,167,95,.13);color:var(--gold2);font-weight:800;font-size:.86rem}
-.two-col-legal{max-width:900px}
-.two-col-legal h2{font-family:Georgia,"Times New Roman",serif;font-size:1.5rem;margin:30px 0 10px}
-.two-col-legal p,.two-col-legal li{color:#d2d2d2}
-.notice{padding:18px;border-left:3px solid var(--gold);background:rgba(200,167,95,.08);margin:22px 0}
-footer{padding:42px 0 90px;color:#a6a6a6;border-top:1px solid rgba(255,255,255,.08);font-size:.9rem}
-.footer-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}
-.footer-grid strong{color:#fff}
-@media (max-width:980px){
-  .nav-links{display:none;position:absolute;top:84px;left:17px;right:17px;flex-direction:column;align-items:stretch;padding:18px;border-radius:18px;background:#111;border:1px solid rgba(255,255,255,.12)}
-  .nav-links.open{display:flex}
-  .menu-btn{display:inline-grid;place-items:center}
-  .card-grid{grid-template-columns:1fr 1fr}
-  .price-layout,.fleet-grid{grid-template-columns:1fr}
-}
-@media (max-width:680px){
-  .nav-inner{min-height:72px}
-  .nav-links{top:72px}
-  .brand-monogram{width:78px;height:52px;flex-basis:78px}
-  .brand strong{font-size:.72rem;letter-spacing:.035em}
-  .brand-copy>span{font-size:.68rem;letter-spacing:.03em}
-  header.page-hero{padding:58px 0 34px}
-  header.page-hero h1{font-size:clamp(1.7rem,7vw,2.3rem)}
-  .card-grid{grid-template-columns:1fr}
-  .route{align-items:flex-start;flex-direction:column}
-  .fleet-card img{height:210px}
-}
-</style>
-  
-<style>
-.xl-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
-.xl-image{border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:radial-gradient(circle at 30% 20%,rgba(28,58,100,.28),transparent 38%),#0a0a0a;padding:22px}
-.xl-image img{width:100%;height:420px;object-fit:contain;object-position:center}
-.xl-copy{padding:10px 0}
-.xl-copy h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:500;margin:0 0 18px}
-.xl-copy p{color:#d4d4d4;font-size:1.03rem;margin:0 0 18px}
-.xl-badges{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 26px}
-.xl-badge{padding:8px 12px;border-radius:999px;background:rgba(200,167,95,.13);color:var(--gold2);font-weight:800;font-size:.9rem}
-@media(max-width:900px){.xl-wrap{grid-template-columns:1fr}.xl-image img{height:330px}}
-@media(max-width:680px){.xl-image img{height:250px}.xl-copy h2{font-size:1.7rem}}
-</style>
+  <script>gtag('js',new Date());gtag('config','AW-18306707563');</script>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="canonical" href="https://skylinedrive.de/xl-transfer.html">
+  <title>XL Transfer Frankfurt | Bis 8 Personen | Skyline Drive GmbH</title>
+  <meta name="description" content="XL Transfer Frankfurt für Familien und Gruppen: Mercedes Vito für bis zu 8 Personen und 4–6 Koffer. Direkt und unkompliziert per WhatsApp anfragen.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skylinedrive.de/xl-transfer.html">
+  <meta property="og:title" content="XL Transfer Frankfurt | Skyline Drive GmbH">
+  <meta property="og:description" content="XL Flughafentransfer mit Mercedes Vito für bis zu 8 Personen und viel Gepäck.">
+
+  <style>
+    :root{--black:#070707;--muted:#a7a7a7;--gold:#c8a75f;--gold2:#f1d891;--max:1180px;--radius:26px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:#fff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{width:min(calc(100% - 34px),var(--max));margin:auto}
+    .nav{position:sticky;top:0;z-index:80;background:linear-gradient(90deg,rgba(18,49,88,.98) 0%,rgba(13,34,61,.97) 16%,rgba(9,16,27,.95) 34%,rgba(7,7,7,.96) 56%,rgba(7,7,7,.98) 100%);backdrop-filter:blur(17px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:14px}
+    .brand-monogram{width:132px;height:72px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 132px;overflow:hidden;background:transparent}
+    .brand-monogram img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(2.12);filter:contrast(1.08) brightness(1.06)}
+    .brand strong{display:block;letter-spacing:.08em;text-transform:uppercase;font-size:1rem}.brand-copy>span{display:block;color:var(--muted);font-size:.76rem;letter-spacing:.08em}
+    .nav-links{display:flex;align-items:center;gap:22px;font-size:.92rem}.nav-links a:not(.btn):hover{color:var(--gold2)}
+    .menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:transparent;color:#fff;font-size:1.25rem;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:49px;padding:0 21px;border-radius:999px;border:0;font-weight:850;cursor:pointer;transition:.2s ease}.btn:hover{transform:translateY(-2px)}
+    .btn-whatsapp{background:#20c263;color:#06160b;box-shadow:0 14px 36px rgba(32,194,99,.20)}.whatsapp-svg{width:22px;height:22px;flex:0 0 22px}
+    .hero{padding:76px 0 64px;background:radial-gradient(circle at 82% 20%,rgba(200,167,95,.13),transparent 28%),linear-gradient(180deg,rgba(255,255,255,.025),transparent)}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#d6be7f;font-size:.78rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.eyebrow:before{content:"";width:38px;height:1px;background:#cbb06b}
+    h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.08;letter-spacing:-.03em}h1{font-size:clamp(2.4rem,5vw,4.4rem);margin:18px 0 16px;max-width:800px}.hero p{max-width:720px;color:#d0d0d0;font-size:1.05rem;margin:0}
+    .hero-facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.fact{padding:7px 11px;border-radius:999px;background:rgba(200,167,95,.13);border:1px solid rgba(200,167,95,.24);color:var(--gold2);font-size:.86rem;font-weight:800}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hero-actions .btn{min-height:54px;padding:0 25px;font-size:1rem}
+    section{padding:78px 0}.xl-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+    .xl-image{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.08);background:radial-gradient(circle at 30% 20%,rgba(28,58,100,.28),transparent 38%),#0a0a0a;padding:22px}.xl-image img{width:100%;height:410px;object-fit:contain;object-position:center}
+    .xl-copy h2{font-size:clamp(1.8rem,3vw,2.7rem);margin:14px 0 18px}.xl-copy p{color:#d4d4d4;font-size:1.02rem;margin:0 0 16px}.xl-copy .btn{margin-top:10px}
+    footer{padding:42px 0 80px;color:#a6a6a6;border-top:1px solid rgba(255,255,255,.08);font-size:.9rem}.footer-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}.footer-grid strong{color:#fff}
+    @media(max-width:980px){.nav-links{display:none;position:absolute;top:84px;left:17px;right:17px;flex-direction:column;align-items:stretch;padding:18px;border-radius:18px;background:#111;border:1px solid rgba(255,255,255,.12)}.nav-links.open{display:flex}.menu-btn{display:inline-grid;place-items:center}.xl-wrap{grid-template-columns:1fr}.xl-image img{height:330px}}
+    @media(max-width:680px){.nav-inner{min-height:72px}.nav-links{top:72px}.brand-monogram{width:92px;height:54px;flex-basis:92px}.brand-monogram img{transform:scale(1.95)}.brand strong{font-size:.72rem}.brand-copy>span{font-size:.68rem}.hero{padding:52px 0 48px}h1{font-size:clamp(2rem,9vw,3rem)}.hero-actions .btn{width:100%;text-align:center}.xl-image img{height:250px}}
+  </style>
 </head>
 <body>
 <nav class="nav" aria-label="Hauptnavigation">
   <div class="container nav-inner">
     <a class="brand" href="index.html" aria-label="Skyline Drive Startseite">
       <span class="brand-monogram" aria-hidden="true"><img src="assets/skyline-drive-logo.png" alt=""></span>
-      <span class="brand-copy">
-        <strong>Flughafentransfer | Skyline Drive GmbH</strong>
-        <span>Flughafentransfer Frankfurt & Fahrservice</span>
-      </span>
+      <span class="brand-copy"><strong>Flughafentransfer | Skyline Drive GmbH</strong><span>Flughafentransfer Frankfurt & Fahrservice</span></span>
     </a>
     <button class="menu-btn" aria-label="Menü öffnen" aria-expanded="false">☰</button>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="preise.html">Preise</a>
-      <a href="flotte.html">Flotte</a>
-      <a href="index.html#kontakt">Kontakt</a>
-      <a class="btn btn-whatsapp nav-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
-  <path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Zm0 22.98h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-4.13 1.07 1.1-3.96-.25-.4a10.4 10.4 0 0 1-1.65-5.59c0-5.73 4.84-10.39 10.79-10.39s10.79 4.66 10.79 10.39c0 5.74-4.84 10.4-10.8 10.4Zm5.91-7.8c-.32-.16-1.9-.92-2.2-1.02-.29-.1-.51-.16-.73.16-.21.31-.83 1.02-1.02 1.23-.19.21-.37.24-.69.08-.32-.15-1.35-.49-2.57-1.55-.95-.83-1.59-1.86-1.78-2.18-.19-.31-.02-.48.14-.64.15-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.71-.99-2.34-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.39-.29.31-1.12 1.08-1.12 2.63 0 1.55 1.15 3.05 1.31 3.26.16.21 2.27 3.4 5.5 4.76.77.32 1.37.51 1.84.66.77.24 1.47.2 2.02.12.62-.09 1.9-.76 2.17-1.49.27-.73.27-1.36.19-1.49-.08-.13-.29-.21-.61-.37Z"/>
-</svg><span>WhatsApp-Anfrage</span></a>
+      <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="preise.html">Preise</a><a href="flotte.html">Flotte</a><a href="xl-transfer.html">XL Transfer</a><a href="index.html#kontakt">Kontakt</a>
+      <a class="btn btn-whatsapp" data-xl-conversion="true" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20den%20XL%20Transfer%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Z"/></svg><span>WhatsApp-Anfrage</span></a>
     </div>
   </div>
 </nav>
-<header class="page-hero">
+
+<header class="hero">
   <div class="container">
-    <div class="eyebrow">XL Transfer</div>
+    <div class="eyebrow">XL Transfer Frankfurt</div>
     <h1>XL Transfer für Familien und Gruppen.</h1>
-    <p>Mehr Platz, mehr Gepäck, eine gemeinsame Fahrt – mit unserem Mercedes Vito.</p>
+    <p>Mit bis zu 8 Personen und viel Gepäck gemeinsam und bequem zum oder vom Flughafen Frankfurt – direkt, unkompliziert und zum vereinbarten Preis.</p>
+    <div class="hero-facts"><span class="fact">Bis zu 8 Personen</span><span class="fact">4–6 Koffer</span><span class="fact">Mercedes Vito</span></div>
+    <div class="hero-actions">
+      <a class="btn btn-whatsapp" data-xl-conversion="true" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20den%20XL%20Transfer%20f%C3%BCr%20meine%20Flughafenfahrt%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Z"/></svg><span>XL Transfer per WhatsApp anfragen</span></a>
+    </div>
   </div>
 </header>
 
 <section>
-  <div class="container">
-    <div class="xl-wrap">
-      <div class="xl-image">
-        <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%284%29.png" alt="Mercedes Vito XL Flughafentransfer" loading="eager">
-      </div>
-      <div class="xl-copy">
-        <div class="eyebrow">Mercedes Vito</div>
-        <h2>Mit bis zu 8 Personen bequem zum Flughafen.</h2>
-        <p>
-          Sie möchten mit Familie oder einer größeren Gruppe reisen und haben mehrere Koffer dabei?
-          Dann wählen Sie unseren XL Transfer.
-        </p>
-        <p>
-          Einfach, unkompliziert und direkt: Wir holen Sie an Ihrer Wunschadresse ab und bringen Sie gemeinsam
-          zum Flughafen oder nach der Landung zu Ihrem Ziel.
-        </p>
-        <div class="xl-badges">
-          <span class="xl-badge">Bis zu 8 Personen</span>
-          <span class="xl-badge">4–6 Koffer</span>
-          <span class="xl-badge">Direkttransfer</span>
-        </div>
-        <a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20den%20XL%20Transfer%20mit%20Mercedes%20Vito%20f%C3%BCr%20meine%20Flughafenfahrt%20anfragen." target="_blank" rel="noopener">
-          <svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
-  <path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Zm0 22.98h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-4.13 1.07 1.1-3.96-.25-.4a10.4 10.4 0 0 1-1.65-5.59c0-5.73 4.84-10.39 10.79-10.39s10.79 4.66 10.79 10.39c0 5.74-4.84 10.4-10.8 10.4Zm5.91-7.8c-.32-.16-1.9-.92-2.2-1.02-.29-.1-.51-.16-.73.16-.21.31-.83 1.02-1.02 1.23-.19.21-.37.24-.69.08-.32-.15-1.35-.49-2.57-1.55-.95-.83-1.59-1.86-1.78-2.18-.19-.31-.02-.48.14-.64.15-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.71-.99-2.34-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.39-.29.31-1.12 1.08-1.12 2.63 0 1.55 1.15 3.05 1.31 3.26.16.21 2.27 3.4 5.5 4.76.77.32 1.37.51 1.84.66.77.24 1.47.2 2.02.12.62-.09 1.9-.76 2.17-1.49.27-.73.27-1.36.19-1.49-.08-.13-.29-.21-.61-.37Z"/>
-</svg><span>XL Transfer anfragen</span>
-        </a>
-      </div>
+  <div class="container xl-wrap">
+    <div class="xl-image"><img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%284%29.png" alt="Mercedes Vito für XL Flughafentransfer Frankfurt" loading="eager"></div>
+    <div class="xl-copy">
+      <div class="eyebrow">Mercedes Vito</div>
+      <h2>Mehr Platz für Personen und Gepäck.</h2>
+      <p>Sie reisen mit Familie, Freunden oder einer größeren Gruppe und möchten gemeinsam zum Flughafen fahren? Unser XL Transfer ist dafür ausgelegt.</p>
+      <p>Der Mercedes Vito bietet Platz für bis zu 8 Personen und je nach Belegung für 4–6 Koffer. Sie teilen uns Abholort, Ziel, Datum und Uhrzeit mit – wir kümmern uns um den passenden Transfer.</p>
+      <p>Ideal für Flughafenfahrten, Gruppen, Familien und Reisende mit zusätzlichem Gepäck.</p>
+      <a class="btn btn-whatsapp" data-xl-conversion="true" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20den%20XL%20Transfer%20mit%20Mercedes%20Vito%20anfragen." target="_blank" rel="noopener">XL Transfer anfragen</a>
     </div>
   </div>
 </section>
 
-<footer>
-    <div class="container footer-grid">
-      <div><strong>Skyline Drive GmbH</strong><br>Flughafentransfer Frankfurt &amp; Fahrservice</div>
-      <div>Friedhofstraße 13 · 63263 Neu-Isenburg<br><a href="tel:+491786287358">+49 178 6287358</a> · <a href="mailto:m.skylinedrive@gmail.com">m.skylinedrive@gmail.com</a></div>
-      <div><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a><br>© 2026 Skyline Drive GmbH</div>
-    </div>
-  </footer>
+<footer><div class="container footer-grid"><div><strong>Skyline Drive GmbH</strong><br>Flughafentransfer Frankfurt & Fahrservice</div><div>Friedhofstraße 13 · 63263 Neu-Isenburg<br><a href="tel:+491786287358">+49 178 6287358</a> · <a href="mailto:m.skylinedrive@gmail.com">m.skylinedrive@gmail.com</a></div><div><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a><br>© 2026 Skyline Drive GmbH</div></div></footer>
+
 <script>
-const menuButton = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-if(menuButton && navLinks){
-  menuButton.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.textContent = open ? '×' : '☰';
-  });
-}
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    if(navLinks){ navLinks.classList.remove('open'); }
-    if(menuButton){
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.textContent = '☰';
-    }
-  });
-});
+  const menuButton=document.querySelector('.menu-btn');const navLinks=document.querySelector('.nav-links');
+  if(menuButton&&navLinks){menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰';});}
+  document.querySelectorAll('a[data-xl-conversion="true"]').forEach(link=>{link.addEventListener('click',()=>{if(typeof gtag==='function'){gtag('event','conversion',{'send_to':'AW-18306707563/na3pCNqYx98cEOvgqJlE'});}});});
 </script>
 </body>
 </html>
