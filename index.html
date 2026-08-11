@@ -403,131 +403,33 @@
     }
     .conversion-card ul {
       margin: 0;
-      padding-left: 20px;
-      color: #4c4f55;
-    }
-    .conversion-card li { margin: 12px 0; }
-
-    .fleet {
-      background: var(--black2);
-    }
-    .fleet-grid {
+      padding: 0;
+      list-style: none;
       display: grid;
-      grid-template-columns: 1.12fr .88fr .88fr;
-      grid-auto-rows: 315px;
       gap: 16px;
     }
-    .fleet-photo {
-      border-radius: 22px;
-      overflow: hidden;
-      position: relative;
-      background: #222;
-      border: 1px solid rgba(255,255,255,.08);
-    }
-    .fleet-photo.large { grid-row: span 2; }
-    .fleet-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: .45s ease;
-    }
-    .fleet-photo:hover img { transform: scale(1.035); }
-    .fleet-label {
-      position: absolute;
-      left: 18px;
-      bottom: 18px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.74);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,.14);
-      font-size: .82rem;
-    }
-
-    .prices {
-      background:
-        radial-gradient(circle at 85% 20%, rgba(200,167,95,.10), transparent 28%),
-        var(--black);
-    }
-    .price-layout {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 24px;
-      align-items: start;
-    }
-    .price-main {
-      padding: 36px;
-      border-radius: var(--radius);
-      background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
-      border: 1px solid rgba(255,255,255,.10);
-    }
-    .price-main h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 2.1rem;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-    .price-main .km {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3.3rem, 7vw, 5.8rem);
-      color: var(--gold2);
-      line-height: 1;
-      margin: 24px 0 10px;
-    }
-    .price-main p, .price-note { color: var(--muted); margin-bottom: 0; }
-    .route-list {
-      display: grid;
-      gap: 14px;
-    }
-    .route {
+    .conversion-card li {
+      padding: 14px 0;
+      border-bottom: 1px solid #ece7dc;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: 18px;
-      padding: 18px 20px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.045);
-      border: 1px solid rgba(255,255,255,.08);
     }
-    .prices .section-head h2 {
-      font-size: clamp(2rem, 4vw, 3.55rem);
-    }
-    .prices .section-head p {
-      font-size: 1rem;
-    }
-    .price-main h3 {
-      font-size: 1.75rem;
-    }
-    .price-main .km {
-      font-size: clamp(2.8rem, 6vw, 4.9rem);
-    }
-    .route {
-      padding: 15px 18px;
-    }
-    .route span {
-      color: #d7d7d7;
-      font-size: .92rem;
-    }
-    .route strong {
-      color: var(--gold2);
-      font-size: 1.08rem;
-      white-space: nowrap;
-    }
+    .conversion-card li:last-child { border-bottom: 0; }
+    .conversion-card strong { color: #4d4431; }
 
     .booking {
-      background: #f2eee5;
-      color: #151515;
+      background: linear-gradient(180deg, #101010, #070707);
     }
     .booking-grid {
       display: grid;
-      grid-template-columns: .86fr 1.14fr;
-      gap: 58px;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 44px;
       align-items: start;
     }
-    .booking .section-head p { color: #61656b; }
     .contact-list {
       display: grid;
-      gap: 18px;
+      gap: 16px;
       margin-top: 32px;
     }
     .contact-line {
@@ -536,116 +438,267 @@
       align-items: flex-start;
     }
     .contact-icon {
-      width: 42px;
-      height: 42px;
-      flex: 0 0 42px;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: #111;
+      border: 1px solid var(--line);
       color: var(--gold2);
-      font-weight: 900;
     }
-    .contact-line small {
-      display: block;
-      color: #6b6f75;
-      margin-bottom: 2px;
-    }
+    .contact-line small { display: block; color: var(--muted); }
     .form-card {
-      padding: 32px;
+      padding: 28px;
       border-radius: var(--radius);
-      background: #fff;
-      box-shadow: 0 24px 70px rgba(0,0,0,.13);
+      background: #f5f2ec;
+      color: #151515;
+      box-shadow: var(--shadow);
     }
     .form-card h3 {
+      margin-bottom: 8px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: 2rem;
       font-weight: 500;
-      margin-bottom: 8px;
     }
-    .form-card > p {
-      margin-top: 0;
-      color: #676b72;
-    }
+    .form-card > p { color: #666; margin: 0 0 20px; }
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
-    .field.full { grid-column: 1 / -1; }
+    .field-full { grid-column: 1 / -1; }
     label {
       display: block;
-      margin-bottom: 6px;
-      font-size: .82rem;
+      margin-bottom: 7px;
+      color: #383838;
+      font-size: .88rem;
       font-weight: 800;
-      color: #4b4f56;
     }
     input, select, textarea {
       width: 100%;
       padding: 13px 14px;
-      border: 1px solid #d1cec5;
+      border: 1px solid #dad4c9;
       border-radius: 12px;
-      color: #151515;
       background: #fff;
-      outline: none;
+      color: #151515;
       font: inherit;
+      outline: none;
     }
     input:focus, select:focus, textarea:focus {
-      border-color: #a88b50;
-      box-shadow: 0 0 0 3px rgba(168,139,80,.14);
+      border-color: #b89b58;
+      box-shadow: 0 0 0 3px rgba(200,167,95,.14);
     }
-    textarea { min-height: 100px; resize: vertical; }
-    .form-card .btn { width: 100%; margin-top: 17px; border: 0; }
+    textarea { min-height: 110px; resize: vertical; }
+    .form-note {
+      margin-top: 12px;
+      color: #6f6f6f;
+      font-size: .78rem;
+    }
+    .form-card .btn-whatsapp {
+      width: 100%;
+      margin-top: 16px;
+    }
 
-    .faq-list { display: grid; gap: 12px; }
-    details {
+    .price-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .price-main {
+      padding: 34px;
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
       border: 1px solid rgba(255,255,255,.10);
-      border-radius: 16px;
-      background: rgba(255,255,255,.035);
+      position: sticky;
+      top: 110px;
+    }
+    .price-main h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+      font-weight: 500;
+    }
+    .price-main .km {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4rem, 8vw, 7.2rem);
+      line-height: .92;
+      color: var(--gold2);
+      margin: 22px 0;
+    }
+    .price-main p { color: #ccc; }
+    .route-list {
+      display: grid;
+      gap: 14px;
+    }
+    .route {
+      padding: 19px 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      transition: .2s ease;
+    }
+    .route:hover {
+      transform: translateX(5px);
+      border-color: rgba(200,167,95,.55);
+    }
+    .route span { color: #e9e9e9; }
+    .route strong { color: var(--gold2); font-size: 1.08rem; white-space: nowrap; }
+
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+    .fleet-card {
+      min-height: 360px;
+      border-radius: 24px;
       overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(255,255,255,.09);
+      background: #111;
+      isolation: isolate;
+    }
+    .fleet-card.large { grid-column: span 7; }
+    .fleet-card.small { grid-column: span 5; }
+    .fleet-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .fleet-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,.92), rgba(0,0,0,.04) 68%);
+      z-index: -1;
+    }
+    .fleet-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 26px;
+    }
+    .fleet-info h3 {
+      margin-bottom: 6px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.75rem;
+      font-weight: 500;
+    }
+    .fleet-info p { margin: 0; color: #ccc; }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 22px;
+    }
+    details {
+      padding: 21px 0;
+      border-top: 1px solid rgba(255,255,255,.13);
     }
     summary {
       cursor: pointer;
-      padding: 20px 22px;
-      font-weight: 850;
       list-style: none;
-    }
-    summary::-webkit-details-marker { display: none; }
-    details p {
-      margin: 0;
-      padding: 0 22px 22px;
-      color: var(--muted);
-    }
-
-    footer {
-      padding: 42px 0 94px;
-      color: #a6a6a6;
-      border-top: 1px solid rgba(255,255,255,.08);
-      font-size: .9rem;
-    }
-    .footer-grid {
+      font-weight: 850;
       display: flex;
       justify-content: space-between;
-      gap: 26px;
-      flex-wrap: wrap;
+      gap: 18px;
     }
-    .footer-grid strong { color: #fff; }
-    .mobile-cta {
-      display: none;
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      color: var(--gold2);
+      font-size: 1.2rem;
+    }
+    details[open] summary::after { content: "–"; }
+    details p { color: var(--muted); margin: 14px 0 0; }
+
+    footer {
+      padding: 64px 0 110px;
+      background: #030303;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .footer-brand h3 {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+    }
+    .footer-brand p,
+    .footer-col p,
+    .footer-col a {
+      color: #999;
+      font-size: .9rem;
+    }
+    .footer-col strong { display: block; margin-bottom: 12px; }
+    .footer-col { display: grid; gap: 7px; }
+
+    .sticky-cta {
       position: fixed;
-      z-index: 100;
-      left: 14px;
-      right: 14px;
+      left: 16px;
+      right: 16px;
       bottom: 14px;
-      min-height: 56px;
-      border-radius: 16px;
+      z-index: 110;
+      display: none;
+    }
+    .sticky-cta a {
+      width: 100%;
+      min-height: 54px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
+      gap: 10px;
+      border-radius: 14px;
       background: #20c263;
       color: #06160b;
-      box-shadow: 0 15px 45px rgba(0,0,0,.42);
+      font-weight: 900;
+      box-shadow: 0 18px 40px rgba(0,0,0,.42);
     }
+
+    .cookie-banner {
+      position: fixed;
+      z-index: 150;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px;
+      border-radius: 16px;
+      background: #fff;
+      color: #151515;
+      box-shadow: 0 22px 70px rgba(0,0,0,.34);
+    }
+    .cookie-banner.show { display: flex; }
+    .cookie-copy { max-width: 760px; }
+    .cookie-copy strong { display: block; margin-bottom: 4px; }
+    .cookie-copy p { margin: 0; color: #5e5e5e; font-size: .87rem; }
+    .cookie-actions { display: flex; gap: 9px; flex-wrap: wrap; }
+    .cookie-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 16px;
+      font-weight: 850;
+      cursor: pointer;
+    }
+    .cookie-accept { background: #111; color: #fff; }
+    .cookie-reject { background: #ececec; color: #222; }
 
     @media (max-width: 980px) {
       .nav-links {
@@ -660,16 +713,17 @@
         border-radius: 18px;
         background: #111;
         border: 1px solid rgba(255,255,255,.12);
-        box-shadow: var(--shadow);
       }
       .nav-links.open { display: flex; }
       .menu-btn { display: inline-grid; place-items: center; }
-      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero { min-height: 700px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
       .trust-item:nth-child(2) { border-right: 0; }
+      .trust-item:nth-child(-n+2) { border-bottom: 1px solid rgba(0,0,0,.10); }
       .service-grid { grid-template-columns: 1fr 1fr; }
-      .ads-grid, .price-layout, .booking-grid { grid-template-columns: 1fr; }
-      .fleet-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 340px; }
-      .fleet-photo.large { grid-row: auto; grid-column: 1 / -1; }
+      .ads-grid, .booking-grid, .price-layout { grid-template-columns: 1fr; }
+      .price-main { position: relative; top: auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 680px) {
@@ -677,163 +731,118 @@
       .nav-inner { min-height: 72px; }
       .nav-links { top: 72px; }
       .brand-monogram { width: 70px; height: 50px; flex-basis: 70px; }
-      .brand-copy > span { display: none; }
+      .brand strong { font-size: .78rem; letter-spacing: .06em; }
+      .brand-copy > span { font-size: .68rem; letter-spacing: .035em; }
       .hero {
-        min-height: 735px;
-        background:
-          linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.86) 48%, var(--black) 100%),
-          url("assets/hero-business-transfer.webp") 60% center / cover no-repeat;
+        min-height: 660px;
+        background-position: 64% center;
       }
-      .hero-content { padding: 88px 0 148px; }
-      h1 {
-        font-size: clamp(2.35rem, 11.5vw, 3.45rem);
-        line-height: 1.04;
-      }
-      .hero p { font-size: 1rem; }
-      .prices .section-head h2 { font-size: 2.15rem; }
-      .price-main h3 { font-size: 1.5rem; }
-      .route span { font-size: .88rem; }
-      .route strong { font-size: 1rem; }
-      .hero-actions .btn { width: 100%; }
-      .hero-points { display: grid; gap: 9px; }
+      .hero-content { padding: 82px 0 140px; }
+      h1 { font-size: clamp(2.4rem, 13vw, 4.25rem); }
       section { padding: 78px 0; }
-      .trust-strip { margin-top: -78px; }
-      .trust-grid, .service-grid, .fleet-grid, .form-grid { grid-template-columns: 1fr; }
+      .section-head h2 { font-size: clamp(2.15rem, 11vw, 3.3rem); }
+      .trust-strip { margin-top: -42px; }
+      .trust-grid,
+      .service-grid,
+      .faq-grid { grid-template-columns: 1fr; }
       .trust-item { border-right: 0; border-bottom: 1px solid rgba(0,0,0,.10); }
       .trust-item:last-child { border-bottom: 0; }
-      .fleet-grid { grid-auto-rows: 400px; }
-      .fleet-photo.large { grid-column: auto; }
-      .route { align-items: flex-start; flex-direction: column; }
-      .field.full { grid-column: auto; }
-      .form-card { padding: 23px; }
-      .mobile-cta { display: flex; }
-      footer { padding-bottom: 100px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field-full { grid-column: auto; }
+      .fleet-card.large, .fleet-card.small { grid-column: span 12; }
+      .fleet-card { min-height: 315px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .sticky-cta { display: block; }
+      .cookie-banner { flex-direction: column; align-items: stretch; bottom: 82px; }
+      .cookie-actions .cookie-btn { flex: 1; }
     }
 
+    /* === Skyline Drive final layout additions === */
+    .nav-inner{min-height:84px !important}
+    .brand{gap:15px !important}
     .brand-monogram {width:118px !important;height:68px !important;flex:0 0 118px !important;padding:5px;border-radius:14px !important;background:#0b1828 !important;border:1px solid rgba(241,216,145,.28) !important;overflow:hidden !important;}
     .brand-monogram img {width:100% !important;height:100% !important;object-fit:contain !important;transform:none !important;}
-    .nav-whatsapp {background:#20c263 !important;color:#06160b !important;}
-    .wa-icon {width:22px;height:22px;display:inline-grid;place-items:center;border:2px solid currentColor;border-radius:50%;font-size:.66rem;}
-    .booking.compact-booking {padding:62px 0;}
-    .compact-booking .booking-grid {gap:34px;}
-    .compact-booking .section-head {margin-bottom:22px;}
-    .compact-booking .section-head h2 {font-size:clamp(1.85rem,3.2vw,3rem);}
-    .compact-booking .contact-list {gap:11px;margin-top:20px;}
-    .compact-booking .form-card {padding:24px;}
-    .compact-booking .form-card h3 {font-size:1.65rem;}
-    .compact-booking .form-card > p {font-size:.92rem;}
-    .small-price-hint {margin-top:20px;font-size:.9rem;color:#6b6f75;font-weight:700;}
-    .service-card {display:block;cursor:pointer;transition:background .22s ease,color .22s ease,transform .22s ease;}
-    .service-card:hover,.service-card:focus-visible {background:#fff;color:#111;transform:translateY(-4px);outline:none;}
-    .service-card:hover p,.service-card:focus-visible p {color:#555;}
-    .service-card:hover h3,.service-card:focus-visible h3 {color:#111;}
-    .trust-item {position:relative;min-height:150px;overflow:hidden;padding-bottom:54px;}
-    .trust-visual {position:absolute;right:18px;bottom:12px;width:70px;height:34px;color:#1b1b1b;opacity:.7;transition:transform .35s ease,opacity .35s ease;}
-    .trust-item:hover .trust-visual {opacity:1;}
-    .trust-item:hover .plane-visual {transform:translate(9px,-8px) rotate(-7deg);}
-    .trust-item:hover .car-visual {transform:translateX(9px);}
-    .trust-visual svg {width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
-    .ads-block .section-head h2 {font-size:clamp(1.95rem,3.4vw,3.2rem);}
-    .ads-block .section-head p {font-size:1rem;}
-    .conversion-card {padding:26px;}
-    a.btn.btn-primary[href*="wa.me"],.btn-whatsapp {background:#20c263 !important;color:#06160b !important;box-shadow:0 14px 36px rgba(32,194,99,.20) !important;}
-    .fleet-photo {cursor:pointer;}
-    .fleet-photo:hover img {transform:none !important;}
-    .fleet-info {display:none;position:absolute;inset:0;z-index:3;padding:26px;align-items:center;justify-content:center;text-align:center;background:rgba(5,5,5,.93);backdrop-filter:blur(7px);}
-    .fleet-photo.open .fleet-info {display:flex;}
-    .fleet-info h3 {margin-bottom:10px;font-family:Georgia,"Times New Roman",serif;font-size:1.7rem;}
-    .fleet-info p {margin:5px 0;color:#e4e4e4;}
-    .fleet-info .fleet-hint {margin-top:14px;color:var(--gold2);font-size:.82rem;}
-    .cookie-banner {position:fixed;left:18px;right:18px;bottom:18px;z-index:999;max-width:980px;margin:auto;padding:20px 22px;border-radius:18px;background:#fff;color:#161616;box-shadow:0 24px 70px rgba(0,0,0,.35);display:none;gap:18px;align-items:center;justify-content:space-between;border:1px solid #ded8cc;}
-    .cookie-banner.show {display:flex;}
-    .cookie-copy {max-width:650px;font-size:.92rem;}
-    .cookie-copy strong {display:block;margin-bottom:5px;}
-    .cookie-copy a {text-decoration:underline;}
-    .cookie-actions {display:flex;gap:9px;flex-wrap:wrap;}
-    .cookie-btn {border:0;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer;}
-    .cookie-accept {background:#20c263;color:#06160b;}
-    .cookie-reject {background:#ececec;color:#111;}
-    @media (max-width:680px){.brand-monogram{width:78px !important;height:52px !important;flex-basis:78px !important}.brand strong{font-size:.72rem;letter-spacing:.035em}.trust-item{min-height:132px}.cookie-banner{flex-direction:column;align-items:stretch;bottom:82px}.cookie-actions .cookie-btn{flex:1}}
+    .brand strong{font-size:.98rem !important;letter-spacing:.075em !important}
+    .brand-copy > span{font-size:.75rem !important;letter-spacing:.06em !important}
+    .nav-whatsapp{display:inline-flex !important;align-items:center;gap:9px;}
+    .whatsapp-svg{width:22px;height:22px;flex:0 0 22px;display:block;}
 
+    .hero h1{font-size:clamp(2.5rem,5vw,4.55rem) !important;max-width:800px}
+    @media (max-width:680px){.hero h1{font-size:clamp(2.15rem,10vw,3.4rem) !important}.brand strong{font-size:.74rem !important}.brand-copy>span{font-size:.66rem !important}.brand-monogram{width:78px !important;height:52px !important;flex-basis:78px !important}.cookie-banner{flex-direction:column;align-items:stretch;bottom:82px}.cookie-actions .cookie-btn{flex:1}}
 
-    /* Final design refinements */
-    .black-transition-gap {
-      height: 72px;
-      background: var(--black);
-    }
+    .trust-item{position:relative;overflow:hidden;isolation:isolate;min-height:145px;}
+    .trust-item > *{position:relative;z-index:2;}
+    .trust-item::after{content:"";position:absolute;right:-18px;bottom:-18px;width:128px;height:90px;background-repeat:no-repeat;background-position:center;background-size:contain;opacity:0;transform:translateY(10px) scale(.96);transition:.26s ease;z-index:1;pointer-events:none;}
+    .trust-item:hover::after,.trust-item:focus-visible::after{opacity:.21;transform:translateY(0) scale(1);}
+    .trust-item.sedan::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 100'%3E%3Cpath fill='%23000' d='M23 66c5-18 17-29 38-33l45-7c23-4 48 7 65 25l20 7c10 3 15 9 15 17v8h-21c-3 10-12 17-23 17s-20-7-23-17H79c-3 10-12 17-23 17s-20-7-23-17H14v-9c0-4 3-7 9-8Zm45-22c-14 2-23 8-31 19h47l11-24-27 5Zm50-8-13 27h59c-12-14-28-25-46-27Z'/%3E%3C/svg%3E");}
+    .trust-item.van::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 100'%3E%3Cpath fill='%23000' d='M18 70V29c0-7 5-12 12-12h110c14 0 24 7 32 20l17 28c9 2 15 8 15 16v4h-24c-3 9-12 15-22 15-11 0-19-6-23-15H76c-3 9-12 15-22 15-11 0-19-6-23-15H13V75c0-3 2-5 5-5Zm23-42v34h56V28H41Zm68 0v34h55l-13-23c-4-7-10-11-19-11h-23Z'/%3E%3C/svg%3E");}
+    .trust-item.plane::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 100'%3E%3Cpath fill='%23000' d='m17 58 70-13 45-30c9-6 20-8 30-6l6 2-37 37 69-13c8-1 15 4 16 12 1 7-4 14-11 16l-70 13-25 34-12 2 12-31-51 10-20 18-10 2 8-27-20-7v-9Z'/%3E%3C/svg%3E");}
 
-    .whatsapp-svg {
-      width: 23px;
-      height: 23px;
-      flex: 0 0 23px;
-      display: block;
-    }
+    .service-card{display:block;color:inherit;text-decoration:none;transition:background .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease;}
+    .service-card:hover,.service-card:focus-visible{background:#fff;color:#141414;border-color:#fff;transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.22);outline:none;}
+    .service-card:hover p,.service-card:focus-visible p{color:#666;}
+    .service-card:hover b,.service-card:focus-visible b{background:rgba(200,167,95,.18);color:#725a24;}
 
-    .nav-whatsapp {
-      display: inline-flex !important;
-      align-items: center;
-      gap: 9px;
-      background: #20c263 !important;
-      color: #06160b !important;
-    }
+    .compact-booking{padding:62px 0 !important;background:linear-gradient(180deg,#efe7d7 0%,#f5f1e9 42%,#f3eee5 100%) !important;color:#171717;position:relative;}
+    .compact-booking::before{content:"";position:absolute;left:0;right:0;top:-1px;height:42px;background:linear-gradient(180deg,#070707 0%,rgba(7,7,7,.7) 18%,rgba(37,32,24,.38) 50%,rgba(245,241,233,0) 100%);pointer-events:none;}
+    .compact-booking .booking-grid{grid-template-columns:.78fr 1.22fr !important;gap:28px !important;align-items:start;}
+    .compact-booking .section-head{margin-bottom:20px;max-width:520px;}
+    .compact-booking .eyebrow{color:#c0a359 !important;font-size:.75rem;}
+    .compact-booking .eyebrow::before{background:#c0a359 !important;}
+    .compact-booking .section-head h2{font-size:clamp(1.75rem,3.1vw,2.65rem) !important;margin:14px 0 12px;color:#171717;}
+    .compact-booking .section-head p{font-size:.97rem;color:#68645d;}
+    .compact-booking .contact-list{gap:10px;margin-top:18px;}
+    .compact-booking .contact-icon{width:38px;height:38px;flex-basis:38px;}
+    .compact-booking .contact-line small{color:#7a746a;font-size:.76rem;}
+    .compact-booking .contact-line strong{font-size:.92rem;color:#25211b;}
+    .compact-booking .form-card{padding:20px 22px !important;max-width:540px;margin-left:auto;border-radius:22px;box-shadow:0 18px 46px rgba(0,0,0,.13);}
+    .compact-booking .form-card h3{font-size:1.55rem !important;margin-bottom:6px;}
+    .compact-booking .form-card > p{font-size:.87rem;margin-bottom:14px;}
+    .compact-booking .form-grid{gap:10px 12px;}
+    .compact-booking label{font-size:.78rem;margin-bottom:5px;}
+    .compact-booking input,.compact-booking select,.compact-booking textarea{padding:10px 11px;border-radius:10px;font-size:.9rem;}
+    .compact-booking textarea{min-height:78px;}
+    .compact-booking .form-card .btn-whatsapp{min-height:45px;margin-top:12px;}
+    .compact-booking .form-note{font-size:.72rem;margin-top:8px;}
+    .small-price-hint{margin-top:13px;font-size:.88rem;color:#746d62;}
+    @media(max-width:980px){.compact-booking .booking-grid{grid-template-columns:1fr !important}.compact-booking .form-card{max-width:none;margin-left:0}}
+    @media(max-width:680px){.compact-booking{padding:48px 0 !important}.compact-booking .section-head h2{font-size:1.8rem !important}.compact-booking .form-card{padding:18px !important}.compact-booking .form-grid{grid-template-columns:1fr}.compact-booking .field-full{grid-column:auto}}
 
-    .clickable-routes .route {
-      text-decoration: none;
-      transition: border-color .22s ease, background .22s ease, transform .22s ease, box-shadow .22s ease;
-    }
-    .clickable-routes .route:hover,
-    .clickable-routes .route:focus-visible {
-      border-color: rgba(241,216,145,.72);
-      background: rgba(200,167,95,.12);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(200,167,95,.12);
-      outline: none;
-    }
-    .clickable-routes .route:hover span,
-    .clickable-routes .route:focus-visible span,
-    .clickable-routes .route:hover strong,
-    .clickable-routes .route:focus-visible strong {
-      color: var(--gold2);
-    }
+    .fleet-card{display:block;color:inherit;text-decoration:none;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+    .fleet-card:hover,.fleet-card:focus-visible{transform:translateY(-4px);border-color:rgba(241,216,145,.6);box-shadow:0 18px 44px rgba(0,0,0,.28);outline:none;}
+    .fleet-capacity{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px;}
+    .fleet-capacity span{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(200,167,95,.15);color:#f1d891;border:1px solid rgba(241,216,145,.22);font-size:.82rem;font-weight:800;}
+    .fleet-info-toggle{display:none;}
+    @media(max-width:680px){.fleet-card{min-height:350px}.fleet-info{padding:22px}.fleet-info-toggle{display:inline-flex;margin-top:13px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.45);color:#fff;border-radius:999px;padding:8px 11px;font-weight:800;font-size:.79rem}.fleet-card.mobile-closed .fleet-extra{display:none}.fleet-card.mobile-open .fleet-extra{display:block}.fleet-capacity{margin-top:10px}}
 
-    @media (max-width: 680px) {
-      .black-transition-gap { height: 42px; }
-    }
+    /* === Final v2 overrides === */
+    .price-main{padding:26px !important;position:relative !important;top:auto !important;}
+    .price-main h3{font-size:1.55rem !important;margin-bottom:8px;}
+    .price-main .km{font-size:clamp(3rem,5.8vw,4.8rem) !important;margin:16px 0 12px !important;}
+    .price-main p{font-size:.95rem;margin-bottom:14px;}
+    .price-inline-cta{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
+    .price-inline-cta span{color:#bbb;font-size:.91rem}
+    .price-inline-cta .btn{min-height:42px;padding:0 16px;font-size:.88rem;}
+    .price-bottom-cta{margin-top:22px;padding:18px 20px;border-radius:18px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+    .price-bottom-cta p{margin:0;color:#c9c9c9;font-size:.91rem;max-width:700px}
+    .price-bottom-cta .btn{min-height:42px;padding:0 17px;font-size:.88rem;}
+    .black-transition-gap{height:58px;background:#070707;}
+    @media(max-width:680px){.black-transition-gap{height:34px}.price-main .km{font-size:3.1rem !important}.price-bottom-cta{align-items:stretch}.price-bottom-cta .btn{width:100%}}
 
+    /* === Final v3 refinements === */
+    .compact-booking{padding:54px 0 !important}
+    .compact-booking .booking-grid{grid-template-columns:.82fr 1.18fr !important;gap:24px !important}
+    .compact-booking .section-head h2{font-size:clamp(1.6rem,2.8vw,2.35rem) !important;margin:13px 0 10px !important}
+    .compact-booking .section-head p{font-size:.94rem !important}
+    .compact-booking .form-card{padding:18px 20px !important;max-width:520px !important}
+    .compact-booking .form-card h3{font-size:1.48rem !important}
+    .compact-booking .form-card>p{font-size:.84rem !important;margin-bottom:12px !important}
+    .compact-booking input,.compact-booking select,.compact-booking textarea{padding:9px 10px !important;font-size:.88rem !important}
+    .compact-booking textarea{min-height:72px !important}
+    .compact-booking .form-card .btn-whatsapp{min-height:43px !important;margin-top:10px !important}
+    @media(max-width:980px){.compact-booking .booking-grid{grid-template-columns:1fr !important}.compact-booking .form-card{max-width:none !important}}
 
-    /* v3 fine-tuning */
-    .price-main{padding:28px;}
-    .price-main h3{font-size:1.6rem;}
-    .price-main .km{font-size:clamp(3rem,5.8vw,4.5rem);}
-    .compact-booking{background:linear-gradient(180deg,#dcd7ce 0%, #ebe7df 16%, #f2eee5 100%);}
-    .compact-booking .eyebrow{color:#d0b36b;}
-    .compact-booking .section-head h2{font-size:clamp(1.65rem,3vw,2.65rem);}
-    .compact-booking .booking-grid{grid-template-columns:.95fr 1.05fr;gap:26px;align-items:start;}
-    .compact-booking .form-card{padding:20px;max-width:540px;justify-self:end;}
-    .compact-booking .form-grid{gap:12px;}
-    .compact-booking input,.compact-booking select,.compact-booking textarea{padding:11px 12px;}
-    .compact-booking textarea{min-height:88px;}
-    .small-price-hint{margin-top:14px;font-size:.88rem;color:#6f6a61;font-weight:700;}
-    .booking-cta-line{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px;}
-    .booking-cta-line span{color:#6f6a61;font-weight:700;}
-    .small-green-btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border-radius:999px;background:#20c263;color:#06160b;font-weight:850;box-shadow:0 12px 26px rgba(32,194,99,.18);}
-    .black-transition-gap{height:58px;}
-    .fleet-link-card{display:block;position:relative}
-    .fleet-link-card .fleet-label{z-index:2}
-    .fleet-link-card:hover .fleet-label{background:rgba(200,167,95,.25);color:#fff}
-    .fleet-section-note{margin-top:18px}
-    @media (max-width:980px){
-      .compact-booking .booking-grid{grid-template-columns:1fr;}
-      .compact-booking .form-card{max-width:none;justify-self:auto;}
-    }
-    @media (max-width:680px){
-      .price-main .km{font-size:clamp(2.45rem,11vw,3.5rem);}
-      .compact-booking .section-head h2{font-size:clamp(1.45rem,8vw,2.2rem);}
-      .black-transition-gap{height:34px;}
-    }
-
-
-    /* v4: compact direct enquiry + smaller price highlight */
+    /* === Final v4: make enquiry and starting price visibly smaller === */
     .booking.compact-booking {
       padding: 46px 0 !important;
     }
@@ -895,17 +904,21 @@
     .compact-booking input,
     .compact-booking select,
     .compact-booking textarea {
-      padding: 9px 10px !important;
-      font-size: .9rem !important;
-      border-radius: 10px !important;
+      padding: 8px 10px !important;
+      font-size: .86rem !important;
+      border-radius: 9px !important;
     }
     .compact-booking textarea {
       min-height: 68px !important;
     }
-    .compact-booking .form-card .btn {
+    .compact-booking .form-card .btn-whatsapp {
       min-height: 42px !important;
-      margin-top: 11px !important;
-      font-size: .9rem !important;
+      margin-top: 9px !important;
+      font-size: .88rem !important;
+    }
+    .compact-booking .form-note {
+      margin-top: 7px !important;
+      font-size: .7rem !important;
     }
     .small-price-hint {
       margin-top: 10px !important;
@@ -941,22 +954,11 @@
       }
     }
 
-
-    /* v5: stronger logo zoom + blue-to-black header gradient */
-    .nav{
-      background:
-        linear-gradient(90deg,
-          rgba(18,49,88,.98) 0%,
-          rgba(13,34,61,.97) 16%,
-          rgba(9,16,27,.95) 34%,
-          rgba(7,7,7,.96) 56%,
-          rgba(7,7,7,.98) 100%) !important;
-      backdrop-filter: blur(17px);
-    }
-    .brand-monogram{
-      width: 132px !important;
-      height: 72px !important;
-      flex: 0 0 132px !important;
+    /* Logo visibility fix: zoom into the artwork and blend its dark background into the navigation */
+    .brand-monogram {
+      width: 124px !important;
+      height: 68px !important;
+      flex: 0 0 124px !important;
       padding: 0 !important;
       border: 0 !important;
       border-radius: 0 !important;
@@ -964,97 +966,205 @@
       overflow: hidden !important;
       box-shadow: none !important;
     }
-    .brand-monogram img{
+    .brand-monogram img {
       width: 100% !important;
       height: 100% !important;
-      object-fit: cover !important;
+      object-fit: contain !important;
       object-position: center !important;
-      transform: scale(2.12) !important;
+      transform: scale(1.58) !important;
       transform-origin: center !important;
-      filter: contrast(1.08) brightness(1.06) saturate(1.02);
+      mix-blend-mode: screen;
+      filter: contrast(1.08) brightness(1.06);
     }
-    @media (max-width: 680px){
-      .brand-monogram{
-        width: 92px !important;
+    @media (max-width: 680px) {
+      .brand-monogram {
+        width: 86px !important;
         height: 54px !important;
-        flex-basis: 92px !important;
+        flex-basis: 86px !important;
       }
-      .brand-monogram img{
-        transform: scale(1.95) !important;
+      .brand-monogram img {
+        transform: scale(1.48) !important;
       }
     }
 
-  </style>
+  
+/* Unified Skyline Drive header */
+.nav{
+  position:sticky!important;
+  top:0!important;
+  z-index:80!important;
+  background:rgba(7,7,7,.96)!important;
+  backdrop-filter:blur(17px)!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+}
+.nav .container{
+  width:min(calc(100% - 40px),1400px)!important;
+}
+.nav-inner{
+  min-height:114px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:28px!important;
+}
+.brand{
+  display:flex!important;
+  align-items:center!important;
+  gap:20px!important;
+  min-width:0!important;
+}
+.brand-monogram{
+  width:124px!important;
+  height:68px!important;
+  flex:0 0 124px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  overflow:hidden!important;
+  box-shadow:none!important;
+}
+.brand-monogram img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:scale(1.58)!important;
+  transform-origin:center!important;
+  mix-blend-mode:screen!important;
+  filter:contrast(1.08) brightness(1.06)!important;
+}
+.brand strong{
+  display:block!important;
+  white-space:nowrap!important;
+  font-size:1.05rem!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+.brand-copy>span{
+  display:block!important;
+  white-space:nowrap!important;
+  color:#a7a7a7!important;
+  font-size:.78rem!important;
+  letter-spacing:.08em!important;
+}
+.nav-links{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:22px!important;
+  flex-wrap:nowrap!important;
+  font-size:.93rem!important;
+  white-space:nowrap!important;
+}
+.nav-links>a{
+  white-space:nowrap!important;
+}
+.nav-links a:not(.btn):hover{color:#f1d891!important}
+.nav-whatsapp{
+  padding-left:16px!important;
+  padding-right:16px!important;
+}
+@media(max-width:1180px){
+  .nav-links{gap:15px!important;font-size:.86rem!important}
+  .brand{gap:14px!important}
+  .brand strong{font-size:.9rem!important}
+  .brand-copy>span{font-size:.7rem!important}
+  .nav-whatsapp{display:none!important}
+}
+@media(max-width:980px){
+  .nav-inner{min-height:84px!important}
+  .menu-btn{display:inline-grid!important;place-items:center!important}
+  .nav-links{
+    display:none!important;
+    position:absolute!important;
+    top:84px!important;
+    left:17px!important;
+    right:17px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    padding:18px!important;
+    border-radius:18px!important;
+    background:#111!important;
+    border:1px solid rgba(255,255,255,.12)!important;
+  }
+  .nav-links.open{display:flex!important}
+  .nav-whatsapp{display:inline-flex!important}
+}
+@media(max-width:680px){
+  .nav .container{width:min(calc(100% - 28px),1400px)!important}
+  .nav-inner{min-height:76px!important}
+  .nav-links{top:76px!important}
+  .brand-monogram{
+    width:86px!important;
+    height:54px!important;
+    flex-basis:86px!important;
+  }
+  .brand-monogram img{transform:scale(1.48)!important}
+  .brand{gap:10px!important}
+  .brand strong{font-size:.7rem!important;letter-spacing:.035em!important}
+  .brand-copy>span{font-size:.62rem!important;letter-spacing:.02em!important}
+}
+
+</style>
 </head>
 
 <body>
   <nav class="nav" aria-label="Hauptnavigation">
-    <div class="container nav-inner">
-      <a class="brand" href="#top" aria-label="Skyline Drive Startseite">
-        <span class="brand-monogram" aria-hidden="true"><img src="assets/skyline-drive-logo.png" alt=""></span>
-        <span class="brand-copy">
-          <strong>Flughafentransfer | Skyline Drive GmbH</strong>
-          <span>Flughafentransfer Frankfurt & Fahrservice</span>
-        </span>
-      </a>
-      <button class="menu-btn" aria-label="Menü öffnen" aria-expanded="false">☰</button>
-      <div class="nav-links">
-        <a href="leistungen.html">Leistungen</a>
-        <a href="preise.html">Preise</a>
-        <a href="flotte.html">Flotte</a>
-        <a href="xl-transfer.html">XL-Flughafentransfer</a>
-        <a href="#kontakt">Kontakt</a>
-        <a class="btn btn-whatsapp nav-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Skyline Drive Startseite">
+      <span class="brand-monogram" aria-hidden="true"><img src="assets/skyline-drive-logo.png" alt=""></span>
+      <span class="brand-copy">
+        <strong>Flughafentransfer | Skyline Drive GmbH</strong>
+        <span>Flughafentransfer Frankfurt &amp; Fahrservice</span>
+      </span>
+    </a>
+    <button class="menu-btn" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="preise.html">Preise</a>
+      <a href="flotte.html">Flotte</a>
+      <a href="xl-transfer.html">XL Flughafentransfer</a>
+      <a href="index.html#kontakt">Kontakt</a>
+      <a class="btn btn-whatsapp nav-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
   <path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Zm0 22.98h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-4.13 1.07 1.1-3.96-.25-.4a10.4 10.4 0 0 1-1.65-5.59c0-5.73 4.84-10.39 10.79-10.39s10.79 4.66 10.79 10.39c0 5.74-4.84 10.4-10.8 10.4Zm5.91-7.8c-.32-.16-1.9-.92-2.2-1.02-.29-.1-.51-.16-.73.16-.21.31-.83 1.02-1.02 1.23-.19.21-.37.24-.69.08-.32-.15-1.35-.49-2.57-1.55-.95-.83-1.59-1.86-1.78-2.18-.19-.31-.02-.48.14-.64.15-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.71-.99-2.34-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.39-.29.31-1.12 1.08-1.12 2.63 0 1.55 1.15 3.05 1.31 3.26.16.21 2.27 3.4 5.5 4.76.77.32 1.37.51 1.84.66.77.24 1.47.2 2.02.12.62-.09 1.9-.76 2.17-1.49.27-.73.27-1.36.19-1.49-.08-.13-.29-.21-.61-.37Z"/>
-</svg> Jetzt per WhatsApp</a>
-      </div>
+</svg><span>WhatsApp-Anfrage</span></a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <main id="top">
-    <header class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="eyebrow">Skyline Drive GmbH</div>
-          <h1>Flughafentransfer <span>zum & vom Frankfurt Airport.</span></h1>
-          <p>
-            Günstige Direktfahrten ohne Umsteigen – von Frankfurt, Mainz, Wiesbaden,
-            Darmstadt und vielen weiteren Städten zum Flughafen Frankfurt und zurück.
-            Den Festpreis erhalten Sie vorab, die Buchung erfolgt schnell per WhatsApp.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen.%0A%0AAbholort%3A%20%0AZiel%3A%20%0ADatum%20%26%20Uhrzeit%3A%20%0AFlugnummer%3A%20%0APersonen%3A%20" target="_blank" rel="noopener">Jetzt per WhatsApp anfragen</a>
-            <a class="btn btn-outline" href="#preise">Preise ansehen</a>
-          </div>
-          <ul class="hero-points">
-            <li>Günstige Festpreise ab 30 €</li>
-            <li>Direkte Fahrt bis zum Terminal</li>
-            <li>Abholung an Adresse, Hotel oder Flughafen</li>
-            <li>Limousine, Kombi oder Van</li>
-          </ul>
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">Frankfurt Airport Transfer</span>
+        <h1>Flughafentransfer zum &amp; vom <span>Frankfurt Airport.</span></h1>
+        <p>
+          Günstig und zuverlässig direkt zum oder vom Flughafen Frankfurt.
+          Festpreis vorab, schnelle WhatsApp-Buchung und Abholung in Frankfurt,
+          Rhein-Main und darüber hinaus.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#preise">Preise ansehen</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
+  <path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Zm0 22.98h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-4.13 1.07 1.1-3.96-.25-.4a10.4 10.4 0 0 1-1.65-5.59c0-5.73 4.84-10.39 10.79-10.39s10.79 4.66 10.79 10.39c0 5.74-4.84 10.4-10.8 10.4Zm5.91-7.8c-.32-.16-1.9-.92-2.2-1.02-.29-.1-.51-.16-.73.16-.21.31-.83 1.02-1.02 1.23-.19.21-.37.24-.69.08-.32-.15-1.35-.49-2.57-1.55-.95-.83-1.59-1.86-1.78-2.18-.19-.31-.02-.48.14-.64.15-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.71-.99-2.34-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.39-.29.31-1.12 1.08-1.12 2.63 0 1.55 1.15 3.05 1.31 3.26.16.21 2.27 3.4 5.5 4.76.77.32 1.37.51 1.84.66.77.24 1.47.2 2.02.12.62-.09 1.9-.76 2.17-1.49.27-.73.27-1.36.19-1.49-.08-.13-.29-.21-.61-.37Z"/>
+</svg><span>Jetzt anfragen</span></a>
         </div>
+        <ul class="hero-points">
+          <li>Festpreis vorab</li>
+          <li>Direktfahrt ohne Umwege</li>
+          <li>Für Privat- &amp; Geschäftsreisende</li>
+        </ul>
       </div>
-    </header>
+    </section>
 
     <div class="trust-strip">
       <div class="container">
         <div class="trust-grid">
-          <a class="trust-item whatsapp-route" href="#" data-message="Hallo, ich möchte einen Flughafentransfer zum oder vom Flughafen Frankfurt buchen." aria-label="Flughafentransfer Frankfurt per WhatsApp anfragen">
-            <strong>Frankfurt Flughafen</strong>
-            <span>Preiswerte Fahrten zum und vom Flughafen Frankfurt.</span>
-          </a>
-          <a class="trust-item whatsapp-route" href="#" data-message="Hallo, ich möchte einen Flughafentransfer nach Frankfurt Hahn buchen." aria-label="Flughafentransfer Frankfurt Hahn per WhatsApp anfragen">
-            <strong>Frankfurt Hahn</strong>
-            <span>Preiswerte Fahrt zum Flughafen Frankfurt Hahn.</span>
-          </a>
-          <a class="trust-item whatsapp-route" href="#" data-message="Hallo, ich möchte einen 7-Sitzer Flughafentransfer für meine Familie anfragen." aria-label="7-Sitzer Transfer per WhatsApp anfragen">
-            <strong>7-Sitzer Transfer für Familien</strong>
-            <span>Entspannte Fahrt mit der ganzen Familie, auch mit Kindern.</span>
-          </a>
-          <a class="trust-item whatsapp-route" href="#" data-message="Hallo, ich möchte einen 9-Sitzer Flughafentransfer für eine Gruppe anfragen." aria-label="9-Sitzer Transfer per WhatsApp anfragen">
-            <strong>9-Sitzer Transfer für Gruppen</strong>
-            <span>Gruppentransfer mit viel Platz für Personen und Gepäck.</span>
-          </a>
+          <a class="trust-item sedan" href="https://wa.me/491786287358?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20zum%20oder%20vom%20Flughafen%20Frankfurt%20buchen." target="_blank" rel="noopener"><strong>Frankfurt Flughafen</strong><span>Direkter Transfer zum oder vom FRA</span></a>
+          <a class="trust-item plane" href="https://wa.me/491786287358?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20nach%20Frankfurt%20Hahn%20buchen." target="_blank" rel="noopener"><strong>Frankfurt Hahn</strong><span>Transfer zum Flughafen HHN auf Anfrage</span></a>
+          <a class="trust-item van" href="https://wa.me/491786287358?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%207-Sitzer%20Flughafentransfer%20f%C3%BCr%20meine%20Familie%20anfragen." target="_blank" rel="noopener"><strong>7-Sitzer Transfer für Familien</strong><span>Mehr Platz für Personen und Gepäck</span></a>
+          <a class="trust-item van" href="https://wa.me/491786287358?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%209-Sitzer%20Flughafentransfer%20f%C3%BCr%20eine%20Gruppe%20anfragen." target="_blank" rel="noopener"><strong>9-Sitzer Transfer für Gruppen</strong><span>Gemeinsam und komfortabel zum Flughafen</span></a>
         </div>
       </div>
     </div>
@@ -1065,199 +1175,200 @@
       <div class="container booking-grid">
         <div>
           <div class="section-head">
-            <div class="eyebrow">Direkte Anfrage</div>
-            <h2>Direkt per WhatsApp anfragen.</h2>
+            <span class="eyebrow">Direkte Anfrage</span>
+            <h2>Flughafentransfer unkompliziert anfragen.</h2>
             <p>
-              Fahrtdaten kurz eintragen – danach öffnet sich WhatsApp mit Ihrer vorbereiteten Anfrage.
+              Senden Sie uns die wichtigsten Fahrtdaten direkt per WhatsApp. Wir melden uns mit Verfügbarkeit und Festpreis.
             </p>
+            <p class="small-price-hint"><strong>Flughafentransfer Frankfurt schon ab 30 €.</strong></p>
           </div>
-          <div class="small-price-hint">Flughafentransfer Frankfurt schon ab 30 €.</div>
           <div class="contact-list">
             <div class="contact-line">
-              <div class="contact-icon">W</div>
-              <div><small>WhatsApp & Telefon</small><a href="https://wa.me/491786287358" target="_blank" rel="noopener"><strong>+49 178 6287358</strong></a></div>
+              <div class="contact-icon">WA</div>
+              <div><small>WhatsApp &amp; Telefon</small><strong>+49 178 6287358</strong></div>
             </div>
             <div class="contact-line">
               <div class="contact-icon">@</div>
-              <div><small>E-Mail</small><a href="mailto:m.skylinedrive@gmail.com"><strong>m.skylinedrive@gmail.com</strong></a></div>
-            </div>
-            <div class="contact-line">
-              <div class="contact-icon">⌂</div>
-              <div><small>Firmensitz</small><strong>Friedhofstraße 13<br>63263 Neu-Isenburg</strong></div>
+              <div><small>E-Mail</small><strong>m.skylinedrive@gmail.com</strong></div>
             </div>
           </div>
         </div>
 
         <form class="form-card" id="whatsappForm">
-          <h3>Transfer anfragen</h3>
-          <p>Alle Angaben landen direkt in der WhatsApp-Nachricht.</p>
+          <h3>Fahrt anfragen</h3>
+          <p>Die Daten werden als WhatsApp-Nachricht vorbereitet.</p>
           <div class="form-grid">
-            <div class="field">
-              <label for="name">Name / Unternehmen</label>
-              <input id="name" name="name" autocomplete="name" placeholder="Max Mustermann / Firma">
+            <div>
+              <label for="from">Abholort</label>
+              <input id="from" name="from" placeholder="z. B. Frankfurt" required>
             </div>
-            <div class="field">
-              <label for="service">Leistung</label>
-              <select id="service" name="service">
-                <option>Flughafentransfer Frankfurt</option>
-                <option>Flughafentransfer Frankfurt Hahn</option>
-                <option>Flughafenfahrt mit Kindersitz</option>
-                <option>7-Sitzer Transfer</option>
-                <option>9-Sitzer Transfer</option>
-              </select>
+            <div>
+              <label for="to">Ziel</label>
+              <input id="to" name="to" placeholder="z. B. Frankfurt Flughafen" required>
             </div>
-            <div class="field">
-              <label for="pickup">Abholort</label>
-              <input id="pickup" name="pickup" required placeholder="Straße, Hotel, Office oder Flughafen">
-            </div>
-            <div class="field">
-              <label for="destination">Ziel</label>
-              <input id="destination" name="destination" required placeholder="Zieladresse">
-            </div>
-            <div class="field">
+            <div>
               <label for="date">Datum</label>
-              <input id="date" name="date" type="date">
+              <input id="date" name="date" type="date" required>
             </div>
-            <div class="field">
+            <div>
               <label for="time">Uhrzeit</label>
-              <input id="time" name="time" type="time">
+              <input id="time" name="time" type="time" required>
             </div>
-            <div class="field">
-              <label for="passengers">Personen</label>
-              <select id="passengers" name="passengers">
-                <option>1 Person</option>
-                <option>2 Personen</option>
-                <option>3 Personen</option>
-                <option>4 Personen</option>
-                <option>5–7 Personen</option>
-                <option>7–9 Personen</option>
+            <div>
+              <label for="people">Personen</label>
+              <select id="people" name="people">
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+                <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
               </select>
             </div>
-            <div class="field">
-              <label for="flight">Flugnummer, falls relevant</label>
-              <input id="flight" name="flight" placeholder="z. B. LH123">
+            <div>
+              <label for="luggage">Gepäck</label>
+              <select id="luggage" name="luggage">
+                <option>Handgepäck</option>
+                <option>1–2 Koffer</option>
+                <option>3–4 Koffer</option>
+                <option>5–6 Koffer</option>
+                <option>Mehr als 6 Koffer</option>
+              </select>
             </div>
-            <div class="field full">
-              <label for="notes">Hinweise</label>
-              <textarea id="notes" name="notes" placeholder="Gepäck, Kindersitz, Zwischenstopps, Wunschfahrzeug oder weitere Hinweise"></textarea>
+            <div class="field-full">
+              <label for="flight">Flugnummer / Terminal (optional)</label>
+              <input id="flight" name="flight" placeholder="z. B. LH123, Terminal 1">
+            </div>
+            <div class="field-full">
+              <label for="note">Hinweis</label>
+              <textarea id="note" name="note" placeholder="Kindersitz, Zwischenstopp, besondere Wünsche ..."></textarea>
             </div>
           </div>
-          <button class="btn btn-whatsapp" type="submit">WhatsApp-Anfrage senden</button>
+          <button class="btn btn-whatsapp" type="submit">Anfrage per WhatsApp senden</button>
+          <div class="form-note">Mit dem Absenden öffnen Sie WhatsApp. Es erfolgt keine automatische Buchung.</div>
         </form>
       </div>
     </section>
 
-    <section class="prices" id="preise">
+    <section id="preise">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Günstige Festpreise</div>
+          <span class="eyebrow">Günstige Festpreise</span>
           <h2>Beliebte Flughafentransfers ab 30 €.</h2>
-          <p>
-            Die folgenden Preisbeispiele gelten für einfache Direktfahrten zum oder vom Flughafen Frankfurt.
-            Den verbindlichen Festpreis für Ihre genaue Adresse bestätigen wir vorab persönlich per WhatsApp.
-          </p>
+          <p>Die folgenden Preise dienen als Orientierung. Ihren persönlichen Festpreis erhalten Sie vor der Fahrt.</p>
         </div>
+
         <div class="price-layout">
           <div class="price-main">
-            <h3>Flughafentransfer Frankfurt</h3>
+            <h3>Frankfurt Airport Transfer</h3>
             <div class="km">ab 30 €</div>
-            <p>
-              Preiswerte Direktfahrt von Ihrer Adresse zum Frankfurt Airport oder vom Terminal zu Ihrem Ziel.
-            </p>
-            <div style="margin-top:28px">
-              <a class="btn btn-primary" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20einen%20Flughafentransfer%20anfragen.%0A%0AAbholort%3A%20%0AZiel%3A%20%0ADatum%20%26%20Uhrzeit%3A%20%0AFlugnummer%3A%20" target="_blank" rel="noopener">Festpreis anfragen</a>
-            </div>
+            <p>Ideal für direkte Fahrten aus Frankfurt und der näheren Umgebung zum Flughafen.</p>
+            <div class="price-inline-cta"><span>Persönlichen Festpreis erhalten</span><a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20meinen%20Festpreis%20f%C3%BCr%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
+  <path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Zm0 22.98h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-4.13 1.07 1.1-3.96-.25-.4a10.4 10.4 0 0 1-1.65-5.59c0-5.73 4.84-10.39 10.79-10.39s10.79 4.66 10.79 10.39c0 5.74-4.84 10.4-10.8 10.4Zm5.91-7.8c-.32-.16-1.9-.92-2.2-1.02-.29-.1-.51-.16-.73.16-.21.31-.83 1.02-1.02 1.23-.19.21-.37.24-.69.08-.32-.15-1.35-.49-2.57-1.55-.95-.83-1.59-1.86-1.78-2.18-.19-.31-.02-.48.14-.64.15-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.71-.99-2.34-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.39-.29.31-1.12 1.08-1.12 2.63 0 1.55 1.15 3.05 1.31 3.26.16.21 2.27 3.4 5.5 4.76.77.32 1.37.51 1.84.66.77.24 1.47.2 2.02.12.62-.09 1.9-.76 2.17-1.49.27-.73.27-1.36.19-1.49-.08-.13-.29-.21-.61-.37Z"/>
+</svg><span>Jetzt anfragen</span></a></div>
           </div>
-          <div class="route-list clickable-routes">
-            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20folgende%20Strecke%20anfragen%3A%20Frankfurt%20am%20Main%20%E2%86%94%20Flughafen%20Frankfurt." target="_blank" rel="noopener"><span>Frankfurt am Main ↔ Flughafen Frankfurt</span><strong>ab 30 €</strong></a>
-            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20folgende%20Strecke%20anfragen%3A%20Mainz%20/%20Wiesbaden%20%E2%86%94%20Flughafen%20Frankfurt." target="_blank" rel="noopener"><span>Mainz / Wiesbaden ↔ Flughafen Frankfurt</span><strong>ab 40 €</strong></a>
-            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20folgende%20Strecke%20anfragen%3A%20Darmstadt%20%E2%86%94%20Flughafen%20Frankfurt." target="_blank" rel="noopener"><span>Darmstadt ↔ Flughafen Frankfurt</span><strong>ab 40 €</strong></a>
-            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20folgende%20Strecke%20anfragen%3A%20Bad%20Homburg%20%E2%86%94%20Flughafen%20Frankfurt." target="_blank" rel="noopener"><span>Bad Homburg ↔ Flughafen Frankfurt</span><strong>ab 35 €</strong></a>
-            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20folgende%20Strecke%20anfragen%3A%20Gie%C3%9Fen%20%E2%86%94%20Flughafen%20Frankfurt." target="_blank" rel="noopener"><span>Gießen ↔ Flughafen Frankfurt</span><strong>ab 79 €</strong></a>
-            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20folgende%20Strecke%20anfragen%3A%20Mannheim%20%E2%86%94%20Flughafen%20Frankfurt." target="_blank" rel="noopener"><span>Mannheim ↔ Flughafen Frankfurt</span><strong>ab 89 €</strong></a>
-            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20folgende%20Strecke%20anfragen%3A%20Heidelberg%20%E2%86%94%20Flughafen%20Frankfurt." target="_blank" rel="noopener"><span>Heidelberg ↔ Flughafen Frankfurt</span><strong>ab 99 €</strong></a>
-            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Festpreis%20f%C3%BCr%20folgende%20Strecke%20anfragen%3A%20Van%20/%207-Sitzer%20/%209-Sitzer." target="_blank" rel="noopener"><span>Van / 7-Sitzer / 9-Sitzer</span><strong>auf Anfrage</strong></a>
+          <div class="route-list">
+            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20Frankfurt%20am%20Main%20%E2%86%94%20Flughafen%20Frankfurt%20anfragen." target="_blank" rel="noopener"><span>Frankfurt am Main ↔ Flughafen Frankfurt</span><strong>ab 30 €</strong></a>
+            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20Mainz%20%2F%20Wiesbaden%20%E2%86%94%20Flughafen%20Frankfurt%20anfragen." target="_blank" rel="noopener"><span>Mainz / Wiesbaden ↔ Flughafen Frankfurt</span><strong>ab 40 €</strong></a>
+            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20Darmstadt%20%E2%86%94%20Flughafen%20Frankfurt%20anfragen." target="_blank" rel="noopener"><span>Darmstadt ↔ Flughafen Frankfurt</span><strong>ab 40 €</strong></a>
+            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20Bad%20Homburg%20%E2%86%94%20Flughafen%20Frankfurt%20anfragen." target="_blank" rel="noopener"><span>Bad Homburg ↔ Flughafen Frankfurt</span><strong>ab 35 €</strong></a>
+            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20Gie%C3%9Fen%20%E2%86%94%20Flughafen%20Frankfurt%20anfragen." target="_blank" rel="noopener"><span>Gießen ↔ Flughafen Frankfurt</span><strong>ab 79 €</strong></a>
+            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20Mannheim%20%E2%86%94%20Flughafen%20Frankfurt%20anfragen." target="_blank" rel="noopener"><span>Mannheim ↔ Flughafen Frankfurt</span><strong>ab 89 €</strong></a>
+            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20Heidelberg%20%E2%86%94%20Flughafen%20Frankfurt%20anfragen." target="_blank" rel="noopener"><span>Heidelberg ↔ Flughafen Frankfurt</span><strong>ab 99 €</strong></a>
+            <a class="route" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Van%20%2F%207-Sitzer%20%2F%209-Sitzer%20Flughafentransfer%20anfragen." target="_blank" rel="noopener"><span>Van / 7-Sitzer / 9-Sitzer</span><strong>auf Anfrage</strong></a>
           </div>
         </div>
-        <p class="price-note">
-          Preise können je nach genauer Abholadresse, Uhrzeit, Wartezeit, Zwischenstopps,
-          Fahrzeuggröße und Gepäck abweichen. Maßgeblich ist immer der vor Fahrtbeginn bestätigte Festpreis.
-        </p>
-        <div class="booking-cta-line"><span>Dein Abholort ist nicht dabei?</span><a class="small-green-btn" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20mein%20Abholort%20ist%20nicht%20in%20der%20Preisliste.%20Ich%20m%C3%B6chte%20einen%20Festpreis%20anfragen." target="_blank" rel="noopener">Jetzt anfragen</a></div>
+        <div class="price-bottom-cta"><p>Ihr Ort ist nicht dabei? Auch weitere regionale und überregionale Direktfahrten sind möglich.</p><a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20mein%20Ort%20ist%20nicht%20in%20der%20Preisliste.%20Ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
+  <path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Zm0 22.98h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-4.13 1.07 1.1-3.96-.25-.4a10.4 10.4 0 0 1-1.65-5.59c0-5.73 4.84-10.39 10.79-10.39s10.79 4.66 10.79 10.39c0 5.74-4.84 10.4-10.8 10.4Zm5.91-7.8c-.32-.16-1.9-.92-2.2-1.02-.29-.1-.51-.16-.73.16-.21.31-.83 1.02-1.02 1.23-.19.21-.37.24-.69.08-.32-.15-1.35-.49-2.57-1.55-.95-.83-1.59-1.86-1.78-2.18-.19-.31-.02-.48.14-.64.15-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.71-.99-2.34-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.39-.29.31-1.12 1.08-1.12 2.63 0 1.55 1.15 3.05 1.31 3.26.16.21 2.27 3.4 5.5 4.76.77.32 1.37.51 1.84.66.77.24 1.47.2 2.02.12.62-.09 1.9-.76 2.17-1.49.27-.73.27-1.36.19-1.49-.08-.13-.29-.21-.61-.37Z"/>
+</svg><span>Jetzt anfragen</span></a></div>
       </div>
     </section>
 
-
     <section id="leistungen">
       <div class="container">
-        <div class="section-head"><div class="eyebrow">Leistungen</div><h2>Für jede Reise die passende Lösung.</h2><p>Einfach auswählen – Details finden Sie auf unserer Leistungsseite.</p></div>
+        <div class="section-head">
+          <span class="eyebrow">Leistungen</span>
+          <h2>Einfach zum Flughafen – und genauso einfach zurück.</h2>
+          <p>Direkttransfer zum oder vom Flughafen Frankfurt mit praktischen Extras für Familien und Gruppen.</p>
+        </div>
         <div class="service-grid">
-          <a class="service-card" href="leistungen.html#flughafentransfer"><b>01</b><h3>Flughafentransfer</h3><p>Direkt zum Flughafen oder nach der Landung nach Hause.</p></a>
-          <a class="service-card" href="leistungen.html#kindersitz"><b>02</b><h3>Mit Kindersitz</h3><p>Sicher und entspannt mit der Familie reisen.</p></a>
-          <a class="service-card" href="leistungen.html#7-sitzer"><b>03</b><h3>7-Sitzer</h3><p>Mehr Platz für Familie und Gepäck.</p></a>
-          <a class="service-card" href="leistungen.html#9-sitzer"><b>04</b><h3>9-Sitzer</h3><p>Geräumiger Transfer für Gruppen.</p></a>
+          <a class="service-card" href="leistungen.html#flughafentransfer"><b>01</b><h3>Flughafentransfer</h3><p>Direkte Fahrt zum oder vom Flughafen Frankfurt, ohne unnötige Umwege.</p></a>
+          <a class="service-card" href="leistungen.html#kindersitz"><b>02</b><h3>Mit Kindersitz</h3><p>Kindersitz oder Sitzerhöhung nach vorheriger Anfrage möglich.</p></a>
+          <a class="service-card" href="leistungen.html#7-sitzer"><b>03</b><h3>7-Sitzer</h3><p>Für Familien mit mehr Personen und zusätzlichem Gepäck.</p></a>
+          <a class="service-card" href="leistungen.html#9-sitzer"><b>04</b><h3>9-Sitzer</h3><p>Für Gruppen und gemeinsame Flughafenfahrten in einem Fahrzeug.</p></a>
         </div>
       </div>
     </section>
 
     <section class="ads-block">
       <div class="container ads-grid">
-        <div class="section-head"><div class="eyebrow">Komfortabler Transfer</div><h2>Entspannt zum Flughafen – wir kümmern uns um die Details.</h2><p>Kindersitz benötigt, Flug verspätet oder Zwischenstopp geplant? Teilen Sie uns die Details einfach bei der Anfrage mit – wir planen Ihre Fahrt passend dazu.</p><div style="margin-top:24px"><a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener">Jetzt anfragen</a></div></div>
-        <div class="conversion-card"><h3>Einfach reisen</h3><ul><li>Kindersitze auf Anfrage</li><li>Flugnummer für die Abholung angeben</li><li>Zwischenstopps einplanbar</li><li>7-Sitzer und 9-Sitzer verfügbar</li><li>Festpreis vor Fahrtbeginn</li></ul></div>
+        <div class="section-head">
+          <span class="eyebrow">Komfortabler Flughafentransfer</span>
+          <h2>Entspannt zum Flughafen – wir kümmern uns um die Details.</h2>
+          <p>Teilen Sie uns Ihre Anforderungen bei der Anfrage mit. Wir planen die passende Fahrt für Sie.</p>
+        </div>
+        <div class="conversion-card">
+          <ul>
+            <li><span>Kindersitz oder Sitzerhöhung</span><strong>auf Anfrage</strong></li>
+            <li><span>Flugnummer &amp; Verspätung</span><strong>mitteilen</strong></li>
+            <li><span>Zwischenstopps</span><strong>möglich</strong></li>
+            <li><span>7- oder 9-Sitzer</span><strong>für Gruppen</strong></li>
+            <li><span>Preis</span><strong>vorab als Festpreis</strong></li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    
-    <section class="fleet" id="flotte">
+    <section id="flotte">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Fahrzeuge</div>
-          <h2>Unsere Fahrzeuge für Flughafentransfers.</h2>
-          <p>Wählen Sie ein Fahrzeug – für alle Details gelangen Sie direkt zur Flottenseite.</p>
+          <span class="eyebrow">Flotte</span>
+          <h2>Passendes Fahrzeug für Personen und Gepäck.</h2>
+          <p>Vom komfortablen Pkw bis zum geräumigen Fahrzeug für Familien und Gruppen.</p>
         </div>
+
         <div class="fleet-grid">
-          <a class="fleet-photo fleet-link-card large" href="flotte.html#allgemein">
-            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%281%29.png" alt="Flughafentransfer Skyline Drive" loading="lazy">
-            <span class="fleet-label">Flughafentransfer</span>
+          <a class="fleet-card large" href="flotte.html#allgemein">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%281%29.png" alt="Flughafentransfer Fahrzeug" loading="lazy">
+            <div class="fleet-info"><h3>Flughafentransfer</h3><p>Das passende Fahrzeug wird nach Personenanzahl und Gepäck ausgewählt.</p></div>
           </a>
-          <a class="fleet-photo fleet-link-card" href="flotte.html#e-klasse">
-            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%283%29.png" alt="Mercedes E-Klasse" loading="lazy">
-            <span class="fleet-label">Mercedes E-Klasse</span>
+          <a class="fleet-card small" href="flotte.html#e-klasse">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_11%20%283%29.png" alt="Mercedes E-Klasse Flughafentransfer" loading="lazy">
+            <div class="fleet-info"><h3>Mercedes E-Klasse</h3><p>Komfortabel für Einzelpersonen und kleine Gruppen.</p><div class="fleet-extra"><div class="fleet-capacity"><span>4 Personen</span><span>2–4 Koffer</span></div></div><button class="fleet-info-toggle" type="button">Infos</button></div>
           </a>
-          <a class="fleet-photo fleet-link-card" href="xl-transfer.html">
-            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%284%29.png" alt="Mercedes Vito" loading="lazy">
-            <span class="fleet-label">Mercedes Vito</span>
+          <a class="fleet-card small" href="xl-transfer.html">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%284%29.png" alt="Mercedes Vito Flughafentransfer" loading="lazy">
+            <div class="fleet-info"><h3>Mercedes Vito</h3><p>Viel Platz für größere Gruppen und Gepäck.</p><div class="fleet-extra"><div class="fleet-capacity"><span>8 Personen</span><span>4–6 Koffer</span></div></div><button class="fleet-info-toggle" type="button">Infos</button></div>
           </a>
-          <a class="fleet-photo fleet-link-card" href="flotte.html#passat">
-            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%285%29.png" alt="VW Passat" loading="lazy">
-            <span class="fleet-label">VW Passat</span>
+          <a class="fleet-card large" href="flotte.html#passat">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_12%20%285%29.png" alt="VW Passat Flughafentransfer" loading="lazy">
+            <div class="fleet-info"><h3>VW Passat</h3><p>Bequemer Kombi für Flughafenfahrten und längere Strecken.</p><div class="fleet-extra"><div class="fleet-capacity"><span>4 Personen</span><span>2–4 Koffer</span></div></div><button class="fleet-info-toggle" type="button">Infos</button></div>
           </a>
-          <a class="fleet-photo fleet-link-card" href="flotte.html#touran">
-            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_13%20%286%29.png" alt="VW Touran" loading="lazy">
-            <span class="fleet-label">VW Touran</span>
+          <a class="fleet-card large" href="flotte.html#touran">
+            <img src="assets/ChatGPT%20Image%208.%20Juli%202026%2C%2017_30_13%20%286%29.png" alt="VW Touran Flughafentransfer" loading="lazy">
+            <div class="fleet-info"><h3>VW Touran</h3><p>Geräumige Lösung für Familien, Gruppen und zusätzliches Gepäck.</p><div class="fleet-extra"><div class="fleet-capacity"><span>6 Personen</span><span>2–4 Koffer</span></div></div><button class="fleet-info-toggle" type="button">Infos</button></div>
           </a>
-        </div>
-        <div class="fleet-section-note">
-          <a class="btn btn-whatsapp" href="flotte.html">Zur Flotte</a>
         </div>
       </div>
     </section>
 
     <section id="faq">
       <div class="container">
-        <div class="section-head"><div class="eyebrow">FAQ</div><h2>Häufige Fragen.</h2></div>
-        <div class="faq-list">
-          <details><summary>Was kostet ein Flughafentransfer zum Flughafen Frankfurt?</summary><p>Fahrten aus Frankfurt beginnen ab 30 €. Der genaue Preis hängt von Abholort, Ziel, Uhrzeit, Fahrzeug und möglichen Zwischenstopps ab.</p></details>
-          <details><summary>Kann ich vom Flughafen Frankfurt abgeholt werden?</summary><p>Ja. Wir fahren sowohl zum Flughafen als auch vom Terminal direkt zu Ihrer Wunschadresse.</p></details>
-          <details><summary>Fahren Sie auch zum Flughafen Frankfurt-Hahn?</summary><p>Ja. Transfers nach Frankfurt-Hahn können direkt per WhatsApp angefragt werden.</p></details>
-          <details><summary>Was passiert bei Flugverspätung?</summary><p>Geben Sie bei der Anfrage Ihre Flugnummer an. So kann die Abholung an die tatsächliche Ankunft angepasst werden.</p></details>
-          <details><summary>Gibt es Kindersitze?</summary><p>Ja, auf Anfrage. Bitte nennen Sie Anzahl und Alter der Kinder.</p></details>
-          <details><summary>Kann ich Zwischenstopps buchen?</summary><p>Ja. Geben Sie die gewünschten Zwischenstopps bei der Anfrage an.</p></details>
-          <details><summary>Welche Fahrzeuge gibt es für Familien?</summary><p>Für Familien eignen sich besonders VW Touran und Mercedes Vito.</p></details>
-          <details><summary>Gibt es einen 9-Sitzer?</summary><p>Für größere Gruppen steht je nach Verfügbarkeit ein Mercedes Vito zur Verfügung. Die angebotene Kapazität beträgt bis zu 8 Fahrgäste.</p></details>
-          <details><summary>Kann ich auch mit viel Gepäck fahren?</summary><p>Ja. Teilen Sie uns Anzahl und ungefähre Größe der Koffer mit.</p></details>
-          <details><summary>Wie erhalte ich meinen Festpreis?</summary><p>Senden Sie Abholort, Ziel, Datum, Uhrzeit und Personenzahl per Formular oder WhatsApp.</p></details>
-          <details><summary>Fahren Sie auch außerhalb des Rhein-Main-Gebiets?</summary><p>Ja. Auch längere Direktfahrten sind möglich.</p></details>
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Häufige Fragen zum Flughafentransfer.</h2>
+        </div>
+        <div class="faq-grid">
+          <div>
+            <details><summary>Fahren Sie zum Flughafen Frankfurt?</summary><p>Ja. Unser Schwerpunkt sind Direktfahrten zum und vom Flughafen Frankfurt (FRA).</p></details>
+            <details><summary>Fahren Sie auch zum Flughafen Frankfurt Hahn?</summary><p>Ja, Transfers zum oder vom Flughafen Frankfurt Hahn (HHN) können Sie individuell anfragen.</p></details>
+            <details><summary>Was passiert bei Flugverspätung?</summary><p>Geben Sie uns Ihre Flugnummer bei der Anfrage mit. So können wir die Abholung besser mit Ihnen abstimmen.</p></details>
+            <details><summary>Kann ich einen Kindersitz bestellen?</summary><p>Ja, Kindersitz oder Sitzerhöhung sind nach vorheriger Anfrage möglich.</p></details>
+            <details><summary>Sind Zwischenstopps möglich?</summary><p>Ja. Teilen Sie uns gewünschte Zwischenstopps bitte bei der Anfrage mit, damit wir diese im Festpreis berücksichtigen können.</p></details>
+          </div>
+          <div>
+            <details><summary>Haben Sie Fahrzeuge für 7 bis 9 Personen?</summary><p>Ja. Für Familien und Gruppen stehen je nach Verfügbarkeit geräumige Fahrzeuge wie VW Touran oder Mercedes Vito zur Verfügung.</p></details>
+            <details><summary>Wie viel Gepäck kann ich mitnehmen?</summary><p>Das hängt vom Fahrzeug und der Personenzahl ab. Teilen Sie uns die Anzahl der Koffer mit, damit wir das passende Fahrzeug einplanen.</p></details>
+            <details><summary>Ist der Preis wirklich ein Festpreis?</summary><p>Sie erhalten den vereinbarten Gesamtpreis vor der Fahrt. Sonderwünsche oder zusätzliche Stopps werden vorab berücksichtigt.</p></details>
+            <details><summary>Fahren Sie auch außerhalb von Frankfurt?</summary><p>Ja. Wir fahren im Rhein-Main-Gebiet und übernehmen auf Anfrage auch längere Direktstrecken, zum Beispiel nach Mannheim oder Heidelberg.</p></details>
+            <details><summary>Wie kann ich am schnellsten buchen?</summary><p>Am schnellsten per WhatsApp. Senden Sie Abholort, Ziel, Datum, Uhrzeit, Personenzahl und Gepäck.</p></details>
+          </div>
         </div>
       </div>
     </section>
@@ -1265,27 +1376,52 @@
 
   <footer>
     <div class="container footer-grid">
-      <div><strong>Skyline Drive GmbH</strong><br>Flughafentransfer · Airport Transfer · Businessfahrten</div>
-      <div>Friedhofstraße 13 · 63263 Neu-Isenburg<br><a href="tel:+491786287358">+49 178 6287358</a> · <a href="mailto:m.skylinedrive@gmail.com">m.skylinedrive@gmail.com</a></div>
-      <div><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a><br>© 2026 Skyline Drive GmbH</div>
+      <div class="footer-brand">
+        <h3>Skyline Drive GmbH</h3>
+        <p>Flughafentransfer Frankfurt &amp; Fahrservice.<br>Direkt, komfortabel und zum vorab vereinbarten Festpreis.</p>
+      </div>
+      <div class="footer-col">
+        <strong>Kontakt</strong>
+        <a href="tel:+491786287358">+49 178 6287358</a>
+        <a href="mailto:m.skylinedrive@gmail.com">m.skylinedrive@gmail.com</a>
+        <p>Friedhofstraße 13<br>63263 Neu-Isenburg</p>
+      </div>
+      <div class="footer-col">
+        <strong>Informationen</strong>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="preise.html">Preise</a>
+        <a href="flotte.html">Flotte</a>
+        <a href="#faq">FAQ</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
     </div>
   </footer>
 
-
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
-    <div class="cookie-copy"><strong>Cookies & Google Ads</strong>Wir verwenden Google Ads zur Messung unserer Werbung. Sie können zustimmen oder ablehnen. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</div>
-    <div class="cookie-actions"><button class="cookie-btn cookie-reject" id="cookieReject" type="button">Ablehnen</button><button class="cookie-btn cookie-accept" id="cookieAccept" type="button">Alle akzeptieren</button></div>
+  <div class="sticky-cta">
+    <a href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener"><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
+  <path fill="currentColor" d="M16.02 3.2c-7.05 0-12.78 5.63-12.78 12.56 0 2.22.59 4.39 1.72 6.29L3.1 28.8l6.95-1.8a12.9 12.9 0 0 0 5.97 1.46h.01c7.05 0 12.78-5.63 12.78-12.56S23.07 3.2 16.02 3.2Zm0 22.98h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-4.13 1.07 1.1-3.96-.25-.4a10.4 10.4 0 0 1-1.65-5.59c0-5.73 4.84-10.39 10.79-10.39s10.79 4.66 10.79 10.39c0 5.74-4.84 10.4-10.8 10.4Zm5.91-7.8c-.32-.16-1.9-.92-2.2-1.02-.29-.1-.51-.16-.73.16-.21.31-.83 1.02-1.02 1.23-.19.21-.37.24-.69.08-.32-.15-1.35-.49-2.57-1.55-.95-.83-1.59-1.86-1.78-2.18-.19-.31-.02-.48.14-.64.15-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.71-.99-2.34-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.39-.29.31-1.12 1.08-1.12 2.63 0 1.55 1.15 3.05 1.31 3.26.16.21 2.27 3.4 5.5 4.76.77.32 1.37.51 1.84.66.77.24 1.47.2 2.02.12.62-.09 1.9-.76 2.17-1.49.27-.73.27-1.36.19-1.49-.08-.13-.29-.21-.61-.37Z"/>
+</svg><span>Jetzt anfragen</span></a>
   </div>
 
-  <a class="mobile-cta" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20eine%20Fahrt%20anfragen." target="_blank" rel="noopener">WhatsApp-Anfrage starten</a>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
+    <div class="cookie-copy">
+      <strong>Datenschutz-Einstellungen</strong>
+      <p>Google Ads wird erst nach Ihrer Zustimmung für Werbe- und Messzwecke freigeschaltet. Notwendige Funktionen bleiben davon unberührt.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-reject" id="rejectCookies" type="button">Nur notwendig</button>
+      <button class="cookie-btn cookie-accept" id="acceptCookies" type="button">Alle akzeptieren</button>
+    </div>
+  </div>
 
   <script>
     const menuButton = document.querySelector('.menu-btn');
     const navLinks = document.querySelector('.nav-links');
     menuButton.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      menuButton.setAttribute('aria-expanded', String(open));
-      menuButton.textContent = open ? '×' : '☰';
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.textContent = isOpen ? '×' : '☰';
     });
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
@@ -1295,27 +1431,17 @@
       });
     });
 
-    document.querySelectorAll('.whatsapp-route').forEach(item => {
-      item.addEventListener('click', function(event) {
+    document.querySelectorAll('.fleet-info-toggle').forEach(btn => {
+      btn.addEventListener('click', function(event){
         event.preventDefault();
-        const message = this.dataset.message || 'Hallo Skyline Drive, ich möchte einen Flughafentransfer anfragen.';
-        window.open('https://wa.me/491786287358?text=' + encodeURIComponent(message), '_blank', 'noopener');
+        event.stopPropagation();
+        const card = this.closest('.fleet-card');
+        const opened = card.classList.toggle('mobile-open');
+        card.classList.toggle('mobile-closed', !opened);
+        this.textContent = opened ? 'Weniger' : 'Infos';
       });
     });
-
-    const cookieBanner = document.getElementById('cookieBanner');
-    const consentState = localStorage.getItem('skylineConsent');
-    if (!consentState) cookieBanner.classList.add('show');
-    document.getElementById('cookieAccept').addEventListener('click', () => {
-      localStorage.setItem('skylineConsent', 'accepted');
-      gtag('consent', 'update', {'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
-      cookieBanner.classList.remove('show');
-    });
-    document.getElementById('cookieReject').addEventListener('click', () => {
-      localStorage.setItem('skylineConsent', 'rejected');
-      gtag('consent', 'update', {'ad_storage':'denied','analytics_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});
-      cookieBanner.classList.remove('show');
-    });
+    document.querySelectorAll('.fleet-card').forEach(card => card.classList.add('mobile-closed'));
 
 
     // Google Ads contact conversion tracking
@@ -1341,17 +1467,50 @@
       const message = [
         'Hallo Skyline Drive, ich möchte einen Flughafentransfer anfragen.',
         '',
-        'Name / Unternehmen: ' + (data.get('name') || '-'),
-        'Leistung: ' + (data.get('service') || '-'),
-        'Abholort: ' + (data.get('pickup') || '-'),
-        'Ziel: ' + (data.get('destination') || '-'),
+        'Abholort: ' + (data.get('from') || '-'),
+        'Ziel: ' + (data.get('to') || '-'),
         'Datum: ' + (data.get('date') || '-'),
         'Uhrzeit: ' + (data.get('time') || '-'),
-        'Personen: ' + (data.get('passengers') || '-'),
-        'Flugnummer: ' + (data.get('flight') || '-'),
-        'Hinweise: ' + (data.get('notes') || '-')
+        'Personen: ' + (data.get('people') || '-'),
+        'Gepäck: ' + (data.get('luggage') || '-'),
+        'Flugnummer / Terminal: ' + (data.get('flight') || '-'),
+        'Hinweis: ' + (data.get('note') || '-')
       ].join('\n');
       window.open('https://wa.me/491786287358?text=' + encodeURIComponent(message), '_blank', 'noopener');
+    });
+
+    const banner = document.getElementById('cookieBanner');
+    const acceptButton = document.getElementById('acceptCookies');
+    const rejectButton = document.getElementById('rejectCookies');
+
+    function hideCookieBanner() {
+      banner.classList.remove('show');
+    }
+
+    if (!savedConsent) {
+      setTimeout(() => banner.classList.add('show'), 500);
+    }
+
+    acceptButton.addEventListener('click', () => {
+      localStorage.setItem('skylineConsent', 'accepted');
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+      hideCookieBanner();
+    });
+
+    rejectButton.addEventListener('click', () => {
+      localStorage.setItem('skylineConsent', 'rejected');
+      gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      hideCookieBanner();
     });
   </script>
 </body>
