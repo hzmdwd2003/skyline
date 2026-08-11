@@ -1,0 +1,108 @@
+name: Fix menu and XL placement
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-menu-xl-placement.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Apply fixes
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          pages = ['index.html','leistungen.html','preise.html','flotte.html','xl-transfer.html','datenschutz.html','impressum.html']
+          wide_menu_css = '''
+          <style id="hamburger-visible-laptop-20260811">
+          /* Keep the three-line menu available on normal laptop/desktop widths */
+          @media (max-width:1480px){
+            .nav-inner{min-height:84px!important}
+            .menu-btn{display:inline-grid!important;place-items:center!important;flex:0 0 44px!important;cursor:pointer!important}
+            .nav-links{
+              display:none!important;
+              position:absolute!important;
+              top:84px!important;
+              left:17px!important;
+              right:17px!important;
+              z-index:150!important;
+              flex-direction:column!important;
+              align-items:stretch!important;
+              gap:10px!important;
+              padding:18px!important;
+              border-radius:18px!important;
+              background:#111!important;
+              border:1px solid rgba(255,255,255,.12)!important;
+              box-shadow:0 20px 50px rgba(0,0,0,.38)!important;
+            }
+            .nav-links.open{display:flex!important}
+            .nav-links>a{padding:9px 5px!important;white-space:normal!important}
+            .nav-whatsapp{display:inline-flex!important}
+          }
+          @media(max-width:680px){
+            .nav-inner{min-height:76px!important}
+            .nav-links{top:76px!important}
+          }
+          </style>
+          '''
+          for name in pages:
+              p=Path(name)
+              text=p.read_text(encoding='utf-8')
+              if 'hamburger-visible-laptop-20260811' not in text:
+                  text=text.replace('</head>', wide_menu_css+'\n</head>',1)
+              p.write_text(text,encoding='utf-8')
+
+          p=Path('xl-transfer.html')
+          text=p.read_text(encoding='utf-8')
+
+          # Remove any mistakenly placed Vito info bubbles from the hero action area.
+          text=re.sub(
+              r'(<div class="xl-hero-actions">)\s*<div class="xl-facts"><span class="fact">8 Personen</span><span class="fact">4–6 Koffer</span></div>',
+              r'\1', text, count=1
+          )
+
+          # Add the same info-bubble pattern used for Touran inside the Mercedes Vito text column.
+          vito_block_pattern = r'(<div class="xl-copy"><div class="eyebrow">Mercedes Vito</div>.*?)(<a class="btn btn-wa xl-conv"[^>]*>)'
+          m=re.search(vito_block_pattern,text,flags=re.S)
+          if m and '<span class="fact">8 Personen</span><span class="fact">4–6 Koffer</span>' not in m.group(1):
+              replacement=m.group(1)+'<div class="xl-facts"><span class="fact">8 Personen</span><span class="fact">4–6 Koffer</span></div>'+m.group(2)
+              text=text[:m.start()]+replacement+text[m.end():]
+
+          # Give both vehicle sections more breathing room without changing any wording.
+          spacing_css='''
+          <style id="xl-vehicle-spacing-20260811">
+          .xl-wrap{column-gap:64px!important;row-gap:34px!important}
+          .xl-copy{padding:28px 0!important}
+          .xl-copy .xl-facts{margin:22px 0 24px!important}
+          #xl-touran{padding-top:92px!important;margin-top:28px!important}
+          @media(max-width:900px){
+            .xl-wrap{row-gap:24px!important}
+            .xl-copy{padding:8px 0 18px!important}
+            #xl-touran{padding-top:64px!important;margin-top:10px!important}
+          }
+          </style>
+          '''
+          if 'xl-vehicle-spacing-20260811' not in text:
+              text=text.replace('</head>',spacing_css+'\n</head>',1)
+          p.write_text(text,encoding='utf-8')
+          PY
+      - name: Commit fixes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html leistungen.html preise.html flotte.html xl-transfer.html datenschutz.html impressum.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Restore hamburger access and refine XL vehicle layout"
+            git push origin main
+          fi
