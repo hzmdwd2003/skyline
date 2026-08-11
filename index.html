@@ -431,6 +431,7 @@
       object-fit: cover;
       transition: .45s ease;
     }
+    .fleet-photo:hover img { transform: scale(1.035); }
     .fleet-label {
       position: absolute;
       left: 18px;
@@ -441,39 +442,6 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,.14);
       font-size: .82rem;
-    }
-    .fleet-photo {
-      cursor: pointer;
-    }
-    .fleet-info {
-      display: none;
-      position: absolute;
-      inset: 0;
-      z-index: 3;
-      padding: 28px;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: rgba(5,5,5,.92);
-      backdrop-filter: blur(7px);
-    }
-    .fleet-photo.open .fleet-info {
-      display: flex;
-    }
-    .fleet-info h3 {
-      margin-bottom: 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.8rem;
-      font-weight: 500;
-    }
-    .fleet-info p {
-      margin: 6px 0;
-      color: #dedede;
-    }
-    .fleet-info .fleet-hint {
-      margin-top: 16px;
-      color: var(--gold2);
-      font-size: .84rem;
     }
 
     .prices {
@@ -742,114 +710,51 @@
       footer { padding-bottom: 100px; }
     }
 
-    /* Logo / Navigation */
-    .brand-monogram {
-      width: 118px !important;
-      height: 68px !important;
-      flex: 0 0 118px !important;
-      padding: 5px;
-      border-radius: 14px !important;
-      background: #0b1828 !important;
-      border: 1px solid rgba(241,216,145,.28) !important;
-      overflow: hidden !important;
-    }
-    .brand-monogram img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: contain !important;
-      transform: none !important;
-    }
-    .nav-whatsapp { background:#20c263 !important; color:#06160b !important; }
-    .wa-icon {
-      width: 22px; height: 22px; display:inline-grid; place-items:center;
-      border:2px solid currentColor; border-radius:50%; font-size:.66rem;
-    }
+    .brand-monogram {width:118px !important;height:68px !important;flex:0 0 118px !important;padding:5px;border-radius:14px !important;background:#0b1828 !important;border:1px solid rgba(241,216,145,.28) !important;overflow:hidden !important;}
+    .brand-monogram img {width:100% !important;height:100% !important;object-fit:contain !important;transform:none !important;}
+    .nav-whatsapp {background:#20c263 !important;color:#06160b !important;}
+    .wa-icon {width:22px;height:22px;display:inline-grid;place-items:center;border:2px solid currentColor;border-radius:50%;font-size:.66rem;}
+    .booking.compact-booking {padding:62px 0;}
+    .compact-booking .booking-grid {gap:34px;}
+    .compact-booking .section-head {margin-bottom:22px;}
+    .compact-booking .section-head h2 {font-size:clamp(1.85rem,3.2vw,3rem);}
+    .compact-booking .contact-list {gap:11px;margin-top:20px;}
+    .compact-booking .form-card {padding:24px;}
+    .compact-booking .form-card h3 {font-size:1.65rem;}
+    .compact-booking .form-card > p {font-size:.92rem;}
+    .small-price-hint {margin-top:20px;font-size:.9rem;color:#6b6f75;font-weight:700;}
+    .service-card {display:block;cursor:pointer;transition:background .22s ease,color .22s ease,transform .22s ease;}
+    .service-card:hover,.service-card:focus-visible {background:#fff;color:#111;transform:translateY(-4px);outline:none;}
+    .service-card:hover p,.service-card:focus-visible p {color:#555;}
+    .service-card:hover h3,.service-card:focus-visible h3 {color:#111;}
+    .trust-item {position:relative;min-height:150px;overflow:hidden;padding-bottom:54px;}
+    .trust-visual {position:absolute;right:18px;bottom:12px;width:70px;height:34px;color:#1b1b1b;opacity:.7;transition:transform .35s ease,opacity .35s ease;}
+    .trust-item:hover .trust-visual {opacity:1;}
+    .trust-item:hover .plane-visual {transform:translate(9px,-8px) rotate(-7deg);}
+    .trust-item:hover .car-visual {transform:translateX(9px);}
+    .trust-visual svg {width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+    .ads-block .section-head h2 {font-size:clamp(1.95rem,3.4vw,3.2rem);}
+    .ads-block .section-head p {font-size:1rem;}
+    .conversion-card {padding:26px;}
+    a.btn.btn-primary[href*="wa.me"],.btn-whatsapp {background:#20c263 !important;color:#06160b !important;box-shadow:0 14px 36px rgba(32,194,99,.20) !important;}
+    .fleet-photo {cursor:pointer;}
+    .fleet-photo:hover img {transform:none !important;}
+    .fleet-info {display:none;position:absolute;inset:0;z-index:3;padding:26px;align-items:center;justify-content:center;text-align:center;background:rgba(5,5,5,.93);backdrop-filter:blur(7px);}
+    .fleet-photo.open .fleet-info {display:flex;}
+    .fleet-info h3 {margin-bottom:10px;font-family:Georgia,"Times New Roman",serif;font-size:1.7rem;}
+    .fleet-info p {margin:5px 0;color:#e4e4e4;}
+    .fleet-info .fleet-hint {margin-top:14px;color:var(--gold2);font-size:.82rem;}
+    .cookie-banner {position:fixed;left:18px;right:18px;bottom:18px;z-index:999;max-width:980px;margin:auto;padding:20px 22px;border-radius:18px;background:#fff;color:#161616;box-shadow:0 24px 70px rgba(0,0,0,.35);display:none;gap:18px;align-items:center;justify-content:space-between;border:1px solid #ded8cc;}
+    .cookie-banner.show {display:flex;}
+    .cookie-copy {max-width:650px;font-size:.92rem;}
+    .cookie-copy strong {display:block;margin-bottom:5px;}
+    .cookie-copy a {text-decoration:underline;}
+    .cookie-actions {display:flex;gap:9px;flex-wrap:wrap;}
+    .cookie-btn {border:0;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer;}
+    .cookie-accept {background:#20c263;color:#06160b;}
+    .cookie-reject {background:#ececec;color:#111;}
+    @media (max-width:680px){.brand-monogram{width:78px !important;height:52px !important;flex-basis:78px !important}.brand strong{font-size:.72rem;letter-spacing:.035em}.trust-item{min-height:132px}.cookie-banner{flex-direction:column;align-items:stretch;bottom:82px}.cookie-actions .cookie-btn{flex:1}}
 
-    /* Compact direct enquiry */
-    .booking.compact-booking { padding: 62px 0; }
-    .compact-booking .booking-grid { gap: 34px; }
-    .compact-booking .section-head { margin-bottom: 22px; }
-    .compact-booking .section-head h2 { font-size: clamp(1.85rem, 3.2vw, 3rem); }
-    .compact-booking .contact-list { gap: 11px; margin-top: 20px; }
-    .compact-booking .form-card { padding: 24px; }
-    .compact-booking .form-card h3 { font-size: 1.65rem; }
-    .compact-booking .form-card > p { font-size: .92rem; }
-    .small-price-hint {
-      margin-top: 20px; font-size: .9rem; color:#6b6f75; font-weight:700;
-    }
-
-    /* Clickable service cards */
-    .service-card {
-      display:block;
-      cursor:pointer;
-      transition: background .22s ease, color .22s ease, transform .22s ease;
-    }
-    .service-card:hover,
-    .service-card:focus-visible {
-      background:#fff;
-      color:#111;
-      transform:translateY(-4px);
-      outline:none;
-    }
-    .service-card:hover p,
-    .service-card:focus-visible p { color:#555; }
-    .service-card:hover h3,
-    .service-card:focus-visible h3 { color:#111; }
-
-    /* Trust cards */
-    .trust-item {
-      min-height: auto;
-      padding: 26px 24px;
-    }
-
-    /* Smaller comfort section */
-    .ads-block .section-head h2 { font-size: clamp(1.95rem, 3.4vw, 3.2rem); }
-    .ads-block .section-head p { font-size:1rem; }
-    .conversion-card { padding:26px; }
-
-    /* Green enquiry buttons */
-    a.btn.btn-primary[href*="wa.me"],
-    .btn-whatsapp { background:#20c263 !important; color:#06160b !important; box-shadow:0 14px 36px rgba(32,194,99,.20) !important; }
-
-    /* Fleet click info */
-    .fleet-photo { cursor:pointer; }
-    .fleet-photo:hover img { transform:none !important; }
-    .fleet-info {
-      display:none; position:absolute; inset:0; z-index:3; padding:26px;
-      align-items:center; justify-content:center; text-align:center;
-      background:rgba(5,5,5,.93); backdrop-filter:blur(7px);
-    }
-    .fleet-photo.open .fleet-info { display:flex; }
-    .fleet-info h3 { margin-bottom:10px; font-family:Georgia,"Times New Roman",serif; font-size:1.7rem; }
-    .fleet-info p { margin:5px 0; color:#e4e4e4; }
-    .fleet-info .fleet-hint { margin-top:14px; color:var(--gold2); font-size:.82rem; }
-
-    /* Cookie banner */
-    .cookie-banner {
-      position:fixed; left:18px; right:18px; bottom:18px; z-index:999;
-      max-width:980px; margin:auto; padding:20px 22px; border-radius:18px;
-      background:#fff; color:#161616; box-shadow:0 24px 70px rgba(0,0,0,.35);
-      display:none; gap:18px; align-items:center; justify-content:space-between;
-      border:1px solid #ded8cc;
-    }
-    .cookie-banner.show { display:flex; }
-    .cookie-copy { max-width:650px; font-size:.92rem; }
-    .cookie-copy strong { display:block; margin-bottom:5px; }
-    .cookie-copy a { text-decoration:underline; }
-    .cookie-actions { display:flex; gap:9px; flex-wrap:wrap; }
-    .cookie-btn {
-      border:0; border-radius:999px; padding:10px 15px; font-weight:800; cursor:pointer;
-    }
-    .cookie-accept { background:#20c263; color:#06160b; }
-    .cookie-reject { background:#ececec; color:#111; }
-
-    @media (max-width:680px) {
-      .brand-monogram { width:78px !important; height:52px !important; flex-basis:78px !important; }
-      .brand strong { font-size:.78rem; letter-spacing:.04em; }
-      .trust-item { min-height:132px; }
-      .cookie-banner { flex-direction:column; align-items:stretch; bottom:82px; }
-      .cookie-actions .cookie-btn { flex:1; }
-    }
 
     /* Final design refinements */
     .black-transition-gap {
@@ -895,6 +800,7 @@
       .black-transition-gap { height: 42px; }
     }
 
+
     /* v3 fine-tuning */
     .price-main{padding:28px;}
     .price-main h3{font-size:1.6rem;}
@@ -925,6 +831,7 @@
       .compact-booking .section-head h2{font-size:clamp(1.45rem,8vw,2.2rem);}
       .black-transition-gap{height:34px;}
     }
+
 
     /* v4: compact direct enquiry + smaller price highlight */
     .booking.compact-booking {
@@ -1033,6 +940,7 @@
         font-size: 2.55rem !important;
       }
     }
+
 
     /* Logo visibility fix: zoom into the artwork and blend its dark background into the navigation */
     .brand-monogram {
@@ -1143,7 +1051,7 @@
 
     <div class="black-transition-gap" aria-hidden="true"></div>
 
-        <section class="booking compact-booking" id="kontakt">
+    <section class="booking compact-booking" id="kontakt">
       <div class="container booking-grid">
         <div>
           <div class="section-head">
@@ -1272,59 +1180,20 @@
 
     <section id="leistungen">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Leistungen</div>
-          <h2>Für jede Reise die passende Lösung.</h2>
-          <p>Einfach auswählen – Details finden Sie auf unserer Leistungsseite.</p>
-        </div>
+        <div class="section-head"><div class="eyebrow">Leistungen</div><h2>Für jede Reise die passende Lösung.</h2><p>Einfach auswählen – Details finden Sie auf unserer Leistungsseite.</p></div>
         <div class="service-grid">
-          <a class="service-card" href="leistungen.html#flughafentransfer">
-            <b>01</b>
-            <h3>Flughafentransfer</h3>
-            <p>Direkt zum Flughafen oder nach der Landung nach Hause.</p>
-          </a>
-          <a class="service-card" href="leistungen.html#kindersitz">
-            <b>02</b>
-            <h3>Mit Kindersitz</h3>
-            <p>Sicher und entspannt mit der Familie reisen.</p>
-          </a>
-          <a class="service-card" href="leistungen.html#7-sitzer">
-            <b>03</b>
-            <h3>7-Sitzer</h3>
-            <p>Mehr Platz für Familie und Gepäck.</p>
-          </a>
-          <a class="service-card" href="leistungen.html#9-sitzer">
-            <b>04</b>
-            <h3>9-Sitzer</h3>
-            <p>Geräumiger Transfer für Gruppen.</p>
-          </a>
+          <a class="service-card" href="leistungen.html#flughafentransfer"><b>01</b><h3>Flughafentransfer</h3><p>Direkt zum Flughafen oder nach der Landung nach Hause.</p></a>
+          <a class="service-card" href="leistungen.html#kindersitz"><b>02</b><h3>Mit Kindersitz</h3><p>Sicher und entspannt mit der Familie reisen.</p></a>
+          <a class="service-card" href="leistungen.html#7-sitzer"><b>03</b><h3>7-Sitzer</h3><p>Mehr Platz für Familie und Gepäck.</p></a>
+          <a class="service-card" href="leistungen.html#9-sitzer"><b>04</b><h3>9-Sitzer</h3><p>Geräumiger Transfer für Gruppen.</p></a>
         </div>
       </div>
     </section>
 
     <section class="ads-block">
       <div class="container ads-grid">
-        <div class="section-head">
-          <div class="eyebrow">Komfortabler Transfer</div>
-          <h2>Entspannt zum Flughafen – wir kümmern uns um die Details.</h2>
-          <p>
-            Kindersitz benötigt, Flug verspätet oder Zwischenstopp geplant?
-            Teilen Sie uns die Details einfach bei der Anfrage mit – wir planen Ihre Fahrt passend dazu.
-          </p>
-          <div style="margin-top:24px">
-            <a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener">Jetzt anfragen</a>
-          </div>
-        </div>
-        <div class="conversion-card">
-          <h3>Einfach reisen</h3>
-          <ul>
-            <li>Kindersitze auf Anfrage</li>
-            <li>Flugnummer für die Abholung angeben</li>
-            <li>Zwischenstopps einplanbar</li>
-            <li>7-Sitzer und 9-Sitzer verfügbar</li>
-            <li>Festpreis vor Fahrtbeginn</li>
-          </ul>
-        </div>
+        <div class="section-head"><div class="eyebrow">Komfortabler Transfer</div><h2>Entspannt zum Flughafen – wir kümmern uns um die Details.</h2><p>Kindersitz benötigt, Flug verspätet oder Zwischenstopp geplant? Teilen Sie uns die Details einfach bei der Anfrage mit – wir planen Ihre Fahrt passend dazu.</p><div style="margin-top:24px"><a class="btn btn-whatsapp" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20einen%20Flughafentransfer%20anfragen." target="_blank" rel="noopener">Jetzt anfragen</a></div></div>
+        <div class="conversion-card"><h3>Einfach reisen</h3><ul><li>Kindersitze auf Anfrage</li><li>Flugnummer für die Abholung angeben</li><li>Zwischenstopps einplanbar</li><li>7-Sitzer und 9-Sitzer verfügbar</li><li>Festpreis vor Fahrtbeginn</li></ul></div>
       </div>
     </section>
 
@@ -1366,22 +1235,19 @@
 
     <section id="faq">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">FAQ</div>
-          <h2>Häufige Fragen.</h2>
-        </div>
+        <div class="section-head"><div class="eyebrow">FAQ</div><h2>Häufige Fragen.</h2></div>
         <div class="faq-list">
           <details><summary>Was kostet ein Flughafentransfer zum Flughafen Frankfurt?</summary><p>Fahrten aus Frankfurt beginnen ab 30 €. Der genaue Preis hängt von Abholort, Ziel, Uhrzeit, Fahrzeug und möglichen Zwischenstopps ab.</p></details>
           <details><summary>Kann ich vom Flughafen Frankfurt abgeholt werden?</summary><p>Ja. Wir fahren sowohl zum Flughafen als auch vom Terminal direkt zu Ihrer Wunschadresse.</p></details>
           <details><summary>Fahren Sie auch zum Flughafen Frankfurt-Hahn?</summary><p>Ja. Transfers nach Frankfurt-Hahn können direkt per WhatsApp angefragt werden.</p></details>
           <details><summary>Was passiert bei Flugverspätung?</summary><p>Geben Sie bei der Anfrage Ihre Flugnummer an. So kann die Abholung an die tatsächliche Ankunft angepasst werden.</p></details>
-          <details><summary>Gibt es Kindersitze?</summary><p>Ja, auf Anfrage. Bitte nennen Sie Anzahl und Alter der Kinder, damit passende Sitze eingeplant werden können.</p></details>
-          <details><summary>Kann ich Zwischenstopps buchen?</summary><p>Ja. Geben Sie die gewünschten Zwischenstopps bei der Anfrage an. Sie werden bei der Preisberechnung berücksichtigt.</p></details>
-          <details><summary>Welche Fahrzeuge gibt es für Familien?</summary><p>Für Familien eignen sich besonders VW Touran und Mercedes Vito. Je nach Belegung bieten sie mehr Platz für Personen und Gepäck.</p></details>
-          <details><summary>Gibt es einen 9-Sitzer?</summary><p>Für größere Gruppen steht je nach Verfügbarkeit ein Mercedes Vito zur Verfügung. Die angebotene Sitzplatzkapazität beträgt bis zu 8 Fahrgäste.</p></details>
-          <details><summary>Kann ich auch mit viel Gepäck fahren?</summary><p>Ja. Teilen Sie uns die Anzahl und ungefähre Größe der Koffer mit, damit wir ein passendes Fahrzeug einplanen.</p></details>
-          <details><summary>Wie erhalte ich meinen Festpreis?</summary><p>Senden Sie Abholort, Ziel, Datum, Uhrzeit und Personenzahl per Formular oder WhatsApp. Sie erhalten anschließend Ihren individuellen Festpreis.</p></details>
-          <details><summary>Fahren Sie auch außerhalb des Rhein-Main-Gebiets?</summary><p>Ja. Auch längere Direktfahrten, zum Beispiel aus Mannheim, Heidelberg oder Gießen, sind möglich.</p></details>
+          <details><summary>Gibt es Kindersitze?</summary><p>Ja, auf Anfrage. Bitte nennen Sie Anzahl und Alter der Kinder.</p></details>
+          <details><summary>Kann ich Zwischenstopps buchen?</summary><p>Ja. Geben Sie die gewünschten Zwischenstopps bei der Anfrage an.</p></details>
+          <details><summary>Welche Fahrzeuge gibt es für Familien?</summary><p>Für Familien eignen sich besonders VW Touran und Mercedes Vito.</p></details>
+          <details><summary>Gibt es einen 9-Sitzer?</summary><p>Für größere Gruppen steht je nach Verfügbarkeit ein Mercedes Vito zur Verfügung. Die angebotene Kapazität beträgt bis zu 8 Fahrgäste.</p></details>
+          <details><summary>Kann ich auch mit viel Gepäck fahren?</summary><p>Ja. Teilen Sie uns Anzahl und ungefähre Größe der Koffer mit.</p></details>
+          <details><summary>Wie erhalte ich meinen Festpreis?</summary><p>Senden Sie Abholort, Ziel, Datum, Uhrzeit und Personenzahl per Formular oder WhatsApp.</p></details>
+          <details><summary>Fahren Sie auch außerhalb des Rhein-Main-Gebiets?</summary><p>Ja. Auch längere Direktfahrten sind möglich.</p></details>
         </div>
       </div>
     </section>
@@ -1395,16 +1261,10 @@
     </div>
   </footer>
 
+
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
-    <div class="cookie-copy">
-      <strong>Cookies & Google Ads</strong>
-      Wir verwenden Google Ads zur Messung unserer Werbung. Sie können zustimmen oder ablehnen.
-      Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
-    </div>
-    <div class="cookie-actions">
-      <button class="cookie-btn cookie-reject" id="cookieReject" type="button">Ablehnen</button>
-      <button class="cookie-btn cookie-accept" id="cookieAccept" type="button">Alle akzeptieren</button>
-    </div>
+    <div class="cookie-copy"><strong>Cookies & Google Ads</strong>Wir verwenden Google Ads zur Messung unserer Werbung. Sie können zustimmen oder ablehnen. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</div>
+    <div class="cookie-actions"><button class="cookie-btn cookie-reject" id="cookieReject" type="button">Ablehnen</button><button class="cookie-btn cookie-accept" id="cookieAccept" type="button">Alle akzeptieren</button></div>
   </div>
 
   <a class="mobile-cta" href="https://wa.me/491786287358?text=Hallo%20Skyline%20Drive%2C%20ich%20m%C3%B6chte%20eine%20Fahrt%20anfragen." target="_blank" rel="noopener">WhatsApp-Anfrage starten</a>
@@ -1436,31 +1296,37 @@
     const cookieBanner = document.getElementById('cookieBanner');
     const consentState = localStorage.getItem('skylineConsent');
     if (!consentState) cookieBanner.classList.add('show');
-
     document.getElementById('cookieAccept').addEventListener('click', () => {
       localStorage.setItem('skylineConsent', 'accepted');
-      gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'analytics_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
-      });
+      gtag('consent', 'update', {'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      cookieBanner.classList.remove('show');
+    });
+    document.getElementById('cookieReject').addEventListener('click', () => {
+      localStorage.setItem('skylineConsent', 'rejected');
+      gtag('consent', 'update', {'ad_storage':'denied','analytics_storage':'denied','ad_user_data':'denied','ad_personalization':'denied'});
       cookieBanner.classList.remove('show');
     });
 
-    document.getElementById('cookieReject').addEventListener('click', () => {
-      localStorage.setItem('skylineConsent', 'rejected');
-      gtag('consent', 'update', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
+
+    // Google Ads contact conversion
+    function trackContactConversion() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18306707563/na3pCNqYx98cEOvgqJlE'
+        });
+      }
+    }
+
+    // Count direct WhatsApp enquiry clicks as contact conversions.
+    document.querySelectorAll('a[href*="wa.me/491786287358"]').forEach(link => {
+      link.addEventListener('click', () => {
+        trackContactConversion();
       });
-      cookieBanner.classList.remove('show');
     });
 
     document.getElementById('whatsappForm').addEventListener('submit', function(event) {
       event.preventDefault();
+      trackContactConversion();
       const data = new FormData(this);
       const message = [
         'Hallo Skyline Drive, ich möchte einen Flughafentransfer anfragen.',
