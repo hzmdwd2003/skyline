@@ -276,6 +276,39 @@ footer{padding:42px 0 90px;color:#a6a6a6;border-top:1px solid rgba(255,255,255,.
   .brand-copy>span{font-size:.62rem!important;letter-spacing:.02em!important}
 }
 
+
+
+/* header-collision-fix-20260811 */
+@media (min-width:1181px){
+  .nav .container{width:min(calc(100% - 32px),1480px)!important}
+  .nav-inner{min-height:106px!important;gap:18px!important}
+  .brand{gap:14px!important;flex:0 1 auto!important;min-width:0!important}
+  .brand-monogram{width:108px!important;height:64px!important;flex:0 0 108px!important}
+  .brand strong{font-size:.9rem!important;letter-spacing:.055em!important;white-space:nowrap!important}
+  .brand-copy>span{font-size:.68rem!important;letter-spacing:.045em!important;white-space:nowrap!important}
+  .nav-links{margin-left:auto!important;gap:15px!important;font-size:.86rem!important;white-space:nowrap!important;flex-wrap:nowrap!important}
+  .nav-links>a{white-space:nowrap!important}
+  .nav-whatsapp{display:none!important}
+}
+@media (min-width:1181px) and (max-width:1320px){
+  .brand-monogram{width:98px!important;height:60px!important;flex-basis:98px!important}
+  .brand{gap:10px!important}
+  .brand strong{font-size:.82rem!important;letter-spacing:.04em!important}
+  .brand-copy>span{font-size:.62rem!important;letter-spacing:.03em!important}
+  .nav-links{gap:10px!important;font-size:.79rem!important}
+}
+@media (max-width:1180px){
+  .nav-inner{min-height:84px!important}
+  .menu-btn{display:inline-grid!important;place-items:center!important}
+  .nav-links{display:none!important;position:absolute!important;top:84px!important;left:17px!important;right:17px!important;flex-direction:column!important;align-items:stretch!important;padding:18px!important;border-radius:18px!important;background:#111!important;border:1px solid rgba(255,255,255,.12)!important;z-index:100!important}
+  .nav-links.open{display:flex!important}
+  .nav-whatsapp{display:inline-flex!important}
+}
+@media (max-width:680px){
+  .nav-inner{min-height:76px!important}
+  .nav-links{top:76px!important}
+}
+
 </style>
 
 </head>
